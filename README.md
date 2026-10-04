@@ -17,7 +17,7 @@ Tasks 1–3 use the Oxford-IIIT Pet dataset; Task 4 uses FS2K. All images are 12
 |----------|-------|
 | GitHub repository | https://github.com/AbdullahMasood73/genai-assignment-1 |
 | Technical report (IEEE, LaTeX) | `report/report.pdf` (source: `report/report.tex`, `report/template.tex`) |
-| Demonstration video (YouTube) | YOUTUBE_URL_HERE |
+| Demonstration video (YouTube) | https://youtu.be/iDYYIRUBiP0 |
 | ONNX models (all 7, ~38 MB) | `artifacts/models/` — included in this repository, SHA-256 in `manifest.json` |
 | Optuna studies | `experiments/final_run/` (`optuna.db`, `studies/*.json`) and `artifacts/studies/` |
 | MLflow records | `artifacts/tracking.db` + `artifacts/mlflow_artifacts/` |
