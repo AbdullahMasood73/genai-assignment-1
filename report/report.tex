@@ -181,7 +181,11 @@ matrix, and individual routing failures are included after evaluation.
 \section{Task 3: Joint Soft Mixture}
 The gate is initialized from the trained classifier and the three experts from
 Task 2. An initial two-epoch warm-up trains only the gate with experts frozen;
-then the complete system is jointly fine-tuned with a smaller learning rate.
+the experts are then unfrozen and the complete system is fine-tuned jointly.
+Both stages use one Adam learning rate, searched in $[10^{-5},3\times10^{-4}]$
+(selected $2.7\times10^{-4}$, below the classifier's $7.9\times10^{-4}$ and
+slightly below the specialists' $3\times10^{-4}$); it is not reduced a second
+time at unfreezing.
 \begin{align}
 w&=\mathrm{softmax}(G(\tilde{x})/\tau),\\
 \hat{x}&=w_0\tilde{x}+\sum_{k=1}^{3}w_k A_k(\tilde{x}),\\
@@ -788,7 +792,9 @@ noisy. (5) Single-corruption training does not establish reliable
 mixed-corruption restoration, and disjoint-band masks do not cover all real
 occlusion geometries. (6) Inference is $128\times128$ on CPU; larger uploads are
 resized. (7) Final training used a CPU after free GPU quota was exhausted, which
-limited schedule length.
+limited schedule length. (8) The soft mixture keeps its warm-up learning rate
+after unfreezing the experts instead of lowering it, as the assignment suggests;
+the effect of such a drop was not tested.
 Future work should enlarge the latent for blur, add a sharpening or perceptual
 loss, run longer GAN schedules with more Optuna trials on a GPU, and evaluate
 mixed corruptions.

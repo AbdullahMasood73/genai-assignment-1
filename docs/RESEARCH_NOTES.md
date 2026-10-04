@@ -56,8 +56,9 @@ The soft system evaluates every branch and blends outputs; it is not a sparse
 conditional-compute layer. Shazeer et al. motivate investigating expert imbalance,
 but this project uses the assignment's simpler squared deviation of mean weights
 from 1/4. Balanced training batches make that target meaningful. Gate warm-up
-freezes specialists; joint fine-tuning then unfreezes them at a smaller learning
-rate. Compare clean-image degradation, classifier errors, routing entropy,
+freezes specialists; joint fine-tuning then unfreezes them. The implementation keeps one
+learning rate (2.7e-4, searched in 1e-5 to 3e-4) for both stages; it is not lowered again
+at unfreezing. Compare clean-image degradation, classifier errors, routing entropy,
 inactive branches, and restoration quality rather than assuming soft is better.
 
 Source: https://arxiv.org/abs/1701.06538

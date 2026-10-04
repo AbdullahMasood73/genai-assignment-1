@@ -33,7 +33,7 @@ Each row lists a requirement from the assignment PDF and where to verify it.
 | Requirement | Evidence |
 |---|---|
 | Gate from the classifier, experts from the specialists, identity branch, temperature softmax | `restoration/models.py` (`SoftMixture`), `restoration/train.py` |
-| Gate-only warm-up then joint fine-tuning at a lower learning rate | `restoration/train.py`, report Task 3 |
+| Gate-only warm-up (2 epochs), then joint fine-tuning of gate and experts | `restoration/train.py` (`requires_grad_` schedule), report Task 3. The learning rate is one searched value; it is not lowered again after unfreezing (listed under deviations). |
 | Joint loss: reconstruction, SSIM, classification, balance | `restoration/train.py`, report equations |
 | Optuna over lr, temperature, classification weight, balance weight, α | `experiments/final_run/studies/soft.json` |
 | Mean weights per true condition and severity, routing heatmap, dominant/distributed examples, inactive-branch check | `artifacts/results/test/routing_*.csv/json`, `routing_heatmap.png`, report |
@@ -67,4 +67,5 @@ Each row lists a requirement from the assignment PDF and where to verify it.
 * The official test split was also evaluated for two earlier model generations; the reported models
   were frozen by hash before their test run and selected on validation data only.
 * Final training ran on CPU after the free Colab GPU quota ended.
+* The soft mixture does not lower its learning rate after unfreezing the experts.
 * Blur restoration does not beat the unrestored input on average; sketches are smooth.

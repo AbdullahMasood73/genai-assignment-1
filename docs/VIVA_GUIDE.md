@@ -19,7 +19,8 @@ Training and serving are separate: the laptop needs only the inference models.
    mistakes. Good classification does not guarantee good reconstruction.
 3. **Soft mixture:** the pretrained classifier initializes the gate; the trained
    specialists initialize the experts. A two-epoch warm-up freezes the experts.
-   Joint fine-tuning then updates them with a smaller learning rate. Softmax
+   Joint fine-tuning then updates them; the same learning rate (2.7e-4) is kept —
+   it is not lowered at unfreezing, which the assignment suggests. Softmax
    weights blend the identity and all three experts, so gradients can flow through
    the mixture. A large identity weight can leave noise unchanged.
 4. **Face-to-sketch:** a paired conditional GAN learns a photograph plus one of
@@ -55,21 +56,38 @@ on a logarithmic scale. SSIM measures local structure and contrast. Compare
 results by corruption and severity, including the corrupted-input baseline.
 Average scores can hide clean-image degradation or severe occlusion failures.
 
-## What actually went wrong
+## Development history and caveats
 
-The original dense-bottleneck autoencoders collapsed to nearly constant outputs.
-A normalization-only validation pilot did not fix this. A compressed spatial
-latent retained coarse outlines and improved the validation objective, prompting
-a separate repair run. This is experimental evidence, not proof that every new
-output is good. Inspect the final measured tables and failure examples before
-claiming successful denoising.
+The first dense-bottleneck autoencoders collapsed to nearly constant outputs, and a
+normalization-only pilot did not fix this. A compressed 8x8 spatial latent kept coarse outlines;
+a 16x16 latent with local residual blocks improved further; the final design (8,192-value latent,
+BatchNorm, PixelShuffle upsampling) reached a universal validation objective of 0.085. These pilots
+are sequential changes, not controlled ablations.
 
-Two official test evaluations had already been seen before this improvement. All further improvement decisions use validation. Any final re-evaluation must
-be disclosed; it cannot be described as an untouched test.
-The initial frontend scaffold also preceded the original Stitch design; that
-chronology is disclosed. Docker execution was verified through WSL. Public repository/video links must
-be verified separately. Do not claim that a passing API or ONNX check proves
-model quality or a container deployment.
+State these caveats plainly if asked:
+- The official test split was also evaluated for two earlier model generations. All selection used validation data.
+- Optuna budgets are small (3-4 short trials per study); in three studies the seeded starting configuration won.
+- Blur is not improved on average (the compressed latent caps fine detail); the soft mixture comes closest.
+- Sketches are smooth and lack hatching; style 3 has only 46 test pairs.
+- The soft mixture keeps one learning rate for warm-up and joint fine-tuning (no second reduction).
+- Final models were trained on a CPU after the free Colab GPU quota ended.
+- A passing API or ONNX check proves the pipeline runs, not that the model is good.
+
+## Where to change things (likely live-modification requests)
+
+| Request | Where |
+|---|---|
+| Blur kernel/sigma, salt probability, occlusion count/area, severities | `config()` and `rectangles()` in `restoration/corruptions.py` |
+| L1/SSIM weight alpha | `alpha` in the config JSON; `reconstruction()` in `restoration/models.py` |
+| Latent (bottleneck) size or channel width | `latent` and `base` in the config (`latent` is a multiple of 256 in detail mode); `Autoencoder` in `restoration/models.py` |
+| Soft temperature | `temperature` in the config; `SoftMixture.forward` in `restoration/models.py` |
+| Balance loss | `balance = (weights.mean(0) - 0.25).square().sum()` in `restoration/train.py` (soft branch, around line 231) |
+| Gate warm-up length | `--warmup-epochs` (default 2) in `restoration/train.py` |
+| Add or remove an expert | `SoftMixture` and `component_models` (models.py/train.py), `restoration/export.py`, `backend/app.py` |
+| GAN losses, L1 weight, style embedding size | GAN branch of `train_task` in `restoration/train.py` (around lines 208-225); `embedding` in the config; `Generator`/`Discriminator` in models.py |
+| Paired augmentation | `Faces.__getitem__` in `restoration/data.py` |
+| Image size | `read_rgb` in `restoration/corruptions.py`, `restoration/prepare.py`, `decode` in `backend/app.py` (models must be retrained) |
+| New API field or endpoint | `restore()` / route functions in `backend/app.py`; `request()` in `frontend/src/App.tsx` |
 
 ## Useful code locations
 
