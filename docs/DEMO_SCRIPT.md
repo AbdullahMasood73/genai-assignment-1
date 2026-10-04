@@ -23,7 +23,7 @@ docker compose down
 docker compose up --build      # open http://localhost:8080 in the browser
 ```
 
-On any machine with Docker Desktop or Docker Engine the same two commands inside the repository folder are
+On any machine with Docker Desktop or Docker Engine, the only command needed inside the repository folder is
 `docker compose up --build` (no `DOCKER_HOST`).
 
 Before recording: run `docker compose down`, close other windows, open a terminal in the repository,
