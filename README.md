@@ -15,7 +15,7 @@ Tasks 1–3 use the Oxford-IIIT Pet dataset; Task 4 uses FS2K. All images are 12
 
 | Resource | Where |
 |----------|-------|
-| GitHub repository | https://github.com/Abdullah73/genai-assignment-1 |
+| GitHub repository | https://github.com/AbdullahMasood73/genai-assignment-1 |
 | Technical report (IEEE, LaTeX) | `report/report.pdf` (source: `report/report.tex`, `report/template.tex`) |
 | Demonstration video (YouTube) | YOUTUBE_URL_HERE |
 | ONNX models (all 7, ~38 MB) | `artifacts/models/` — included in this repository, SHA-256 in `manifest.json` |
@@ -29,7 +29,7 @@ Tasks 1–3 use the Oxford-IIIT Pet dataset; Task 4 uses FS2K. All images are 12
 Prerequisite: Docker with Compose. No GPU, Python or Node installation is needed.
 
 ```sh
-git clone https://github.com/Abdullah73/genai-assignment-1.git
+git clone https://github.com/AbdullahMasood73/genai-assignment-1.git
 cd genai-assignment-1
 docker compose up --build
 ```
