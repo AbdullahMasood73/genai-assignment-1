@@ -1,0 +1,15 @@
+{
+  "base": 16,
+  "latent": 128,
+  "dropout": 0.1,
+  "batch_size": 32,
+  "lr": 7.661100707771373e-05,
+  "weight_decay": 1e-05,
+  "alpha": 0.9031616510212273,
+  "temperature": 0.7340279606636548,
+  "classification_weight": 0.03051362379613698,
+  "balance_weight": 0.0013066739238053278,
+  "embedding": 8,
+  "discriminator_lr": 0.0002,
+  "l1_weight": 100.0
+}

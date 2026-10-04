@@ -1,0 +1,43 @@
+{
+  "frozen_utc": "2026-10-04T04:50:13.822578+00:00",
+  "selection_split": "full validation",
+  "selected": "candidate model set; classifier retained from previous generation",
+  "checkpoint_sha256": {
+    "blur": "efa1eadafcc2983ad6d1085f089c1d27d1663dcc53fbfc3361d8f6ece279fbe6",
+    "classifier": "b41060c54da05044b2d8e50b34bc76f88353f59d09012e86b08c05f531c7ddf4",
+    "gan": "bbf60089f542731cec740b29f57d23ddb6d7101ea670396ab33109920992efaf",
+    "occlusion": "ccdcfbc8423a88ad6e245aac196d5722008cdd0df7357cd80fc67dd41dad3342",
+    "salt": "cd2078708515d572fc454f4ccf98321ebe8ce134f98ff9a640b443dffc55591c",
+    "soft": "a72ad8b112e6cfdae693c5522be27b2831af69eaaa1ad97ac30207acc73c6b28",
+    "universal": "b2c214657238c8f0f3d7e26b5463eeaae50f321a6396eefc99c83a7e81d09932"
+  },
+  "comparison": {
+    "universal": {
+      "previous_objective": 0.24516189353560786,
+      "candidate_objective": 0.08527529149144158,
+      "improved": true
+    },
+    "oracle_routing": {
+      "previous_objective": 0.22173667990136892,
+      "candidate_objective": 0.07035139905906324,
+      "improved": true
+    },
+    "predicted_routing": {
+      "previous_objective": 0.2231858114717002,
+      "candidate_objective": 0.07100270283114894,
+      "improved": true
+    },
+    "soft": {
+      "previous_objective": 0.13249447823815821,
+      "candidate_objective": 0.06421759786375017,
+      "improved": true
+    },
+    "gan": {
+      "previous_objective": 0.18983778211305724,
+      "candidate_objective": 0.18532295751871553,
+      "improved": true
+    }
+  },
+  "visual_review": "Noise reduction and shapes improve; pet fine texture remains soft. GAN comparison on the same validation faces remains blurry in both generations, with a small aggregate candidate gain and style 1 regression. Soft clean and low-blur objectives also regress slightly; disclose these exceptions.",
+  "test_policy": "One third official test evaluation after this freeze; two historical tests already observed; no tuning from this test."
+}

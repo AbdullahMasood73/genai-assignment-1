@@ -1,0 +1,26 @@
+{
+  "universal": {
+    "Egyptian_Mau_60": "Large masks hide most of the cat/background; smooth guessed colors fail to recover the scene.",
+    "Ragdoll_78": "The mask crosses the face and body; fur detail is lost and the filled region remains blurry.",
+    "chihuahua_84": "Background occlusion is filled by a broad smooth band instead of the original textured scene.",
+    "shiba_inu_95": "Masks across the head and muzzle produce inaccurate face colors and blurred contours."
+  },
+  "predicted_routing": {
+    "Egyptian_Mau_60": "Salt noise is misclassified as occlusion on a dark background; the wrong expert produces severe smoothing and false background colors.",
+    "Sphynx_23": "Salt noise is misclassified as occlusion on a dark background; the wrong expert produces severe smoothing and false background colors.",
+    "Egyptian_Mau_97": "Salt noise is misclassified as occlusion on a dark background; the wrong expert produces severe smoothing and false background colors.",
+    "Egyptian_Mau_63": "Salt noise is misclassified as occlusion on a dark background; the wrong expert produces severe smoothing and false background colors."
+  },
+  "soft": {
+    "Egyptian_Mau_60": "The mixture fills a masked dark background with incorrect smooth colors.",
+    "german_shorthaired_96": "A visible speckled face is partly retained rather than cleaned; the mixture still loses some detail.",
+    "staffordshire_bull_terrier_92": "Large masks across the face/body produce a blurred, inaccurate animal reconstruction.",
+    "boxer_91": "The large foreground mask destroys body/chair detail; the mixture substitutes smooth approximate colors."
+  },
+  "gan": {
+    "photo1_image1600": "Dense hair strokes and dark shading are missing; the generated face is overly pale and smooth.",
+    "photo1_image1599": "Hair and facial contours are underdrawn compared with the dense reference sketch.",
+    "photo1_image0837": "The overall head shape is present, but textured hair/shading and fine feature lines are absent.",
+    "photo1_image1034": "The output face is pale and smooth, missing dark hair strokes and precise facial contours."
+  }
+}

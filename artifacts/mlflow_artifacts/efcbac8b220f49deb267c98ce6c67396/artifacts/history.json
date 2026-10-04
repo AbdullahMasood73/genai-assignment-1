@@ -1,0 +1,29 @@
+[
+  {
+    "train_loss": 0.29554188176989554,
+    "validation_objective": 0.2697302632033825,
+    "validation_l1": 0.16970861256122588,
+    "validation_ssim": 0.3301831677556038,
+    "validation_psnr": 13.784228134155274,
+    "seconds": 5.181629180908203,
+    "epoch": 1
+  },
+  {
+    "train_loss": 0.28176521360874174,
+    "validation_objective": 0.276689974963665,
+    "validation_l1": 0.17851285263895988,
+    "validation_ssim": 0.33060155957937243,
+    "validation_psnr": 13.464049768447875,
+    "seconds": 4.8951802253723145,
+    "epoch": 2
+  },
+  {
+    "train_loss": 0.2824898101389408,
+    "validation_objective": 0.29683356881141665,
+    "validation_l1": 0.20171635448932648,
+    "validation_ssim": 0.3226975962519646,
+    "validation_psnr": 12.07879605293274,
+    "seconds": 5.116589307785034,
+    "epoch": 3
+  }
+]

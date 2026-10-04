@@ -1,0 +1,298 @@
+{
+  "status": "authorized_local_improvement_work_complete_human_identity_publication_pending",
+  "previous_universal_validation_objective": 0.24516189353560786,
+  "selection": "validation only; previous official tests already observed",
+  "architecture": "three downsampling stages, compressed 16x16 latent, local residual refinement, tracked BatchNorm, learned subpixel upsampling, no bottleneck bypass",
+  "research": [
+    "https://docs.pytorch.org/docs/2.8/generated/torch.nn.GroupNorm.html",
+    "https://arxiv.org/abs/1903.06117",
+    "https://arxiv.org/abs/1609.05158",
+    "https://arxiv.org/abs/1707.02937"
+  ],
+  "pipeline_tests": "20 passed, 24 deprecation warnings, 50.55 seconds after exact validation-score optimization",
+  "test_policy": "No test evaluation until final validation-selected candidates are frozen",
+  "rejected_pilot": {
+    "lr": 0.001,
+    "epochs": 8,
+    "best_validation_objective": 0.311428757271041,
+    "failure": "saturated output from epoch 4",
+    "promoted": false
+  },
+  "stable_pilot": {
+    "lr": 0.0001,
+    "epochs": 16,
+    "best": {
+      "train_loss": 0.21222322984882022,
+      "validation_objective": 0.20738151902737825,
+      "validation_l1": 0.11763056620307591,
+      "validation_ssim": 0.4336146875568058,
+      "validation_psnr": 16.5600347975026,
+      "seconds": 25.69560933113098,
+      "epoch": 14
+    }
+  },
+  "next_pilot": {
+    "base": 24,
+    "latent": 8192,
+    "dropout": 0.0,
+    "lr": 0.0003,
+    "epochs": 12,
+    "detail_bn": true
+  },
+  "batchnorm_pilot": {
+    "best": {
+      "train_loss": 0.21185206913429758,
+      "validation_objective": 0.20122035735327265,
+      "validation_l1": 0.11315358851266943,
+      "validation_ssim": 0.44651258276856465,
+      "validation_psnr": 16.671083844226338,
+      "seconds": 26.38046169281006,
+      "epoch": 5
+    },
+    "epochs": 12,
+    "latent": 8192,
+    "visual_result": "Still substantial blur; clearer shape but insufficient fine detail"
+  },
+  "shuffle_pilot": {
+    "best": {
+      "train_loss": 0.15055110224563142,
+      "validation_objective": 0.14388949232904807,
+      "validation_l1": 0.07450866747809493,
+      "validation_ssim": 0.5785872176937435,
+      "validation_psnr": 20.28145175602125,
+      "seconds": 27.47694492340088,
+      "epoch": 10
+    },
+    "epochs": 12,
+    "latent": 8192
+  },
+  "training_started_utc": "2026-10-03 18:52:31",
+  "full_schedule": {
+    "universal": 24,
+    "specialists_each": 20,
+    "soft": 12,
+    "gan": 60
+  },
+  "trial_budget": {
+    "target_trials": 3,
+    "epochs": 3,
+    "train_batches": 40,
+    "validation_batches": 40
+  },
+  "classifier": "retained prior validation-selected model",
+  "final_initialization": "ICNR phase matched; selected pilot used standard initialization",
+  "colab_interrupted": "2026-10-03 19:01 UTC: runtime disconnected; reconnect reported free GPU usage limits",
+  "pilot_weights_lost": true,
+  "gpu_full_run": "Reached at least epoch 12; incomplete model not downloaded before runtime loss",
+  "budget_reason": "Fixed before final candidate testing after free GPU quota, to reserve deadline time for full evaluation and deployment verification",
+  "cpu_session": 62170,
+  "artifacts": "artifacts",
+  "latest_universal_full_validation_best": {
+    "train_loss": 0.08612135068877884,
+    "validation_objective": 0.08527529421059982,
+    "validation_l1": 0.04179795302612626,
+    "validation_ssim": 0.7408153479513915,
+    "validation_psnr": 24.532507150069527,
+    "seconds": 284.3564338684082,
+    "epoch": 22
+  },
+  "local_universal_latest_epoch": 24,
+  "local_universal_best": {
+    "train_loss": 0.08612135068877884,
+    "validation_objective": 0.08527529421059982,
+    "validation_l1": 0.04179795302612626,
+    "validation_ssim": 0.7408153479513915,
+    "validation_psnr": 24.532507150069527,
+    "seconds": 284.3564338684082,
+    "epoch": 22
+  },
+  "evidence_smoke": "Passed: separate, labelled 80-input/80-pair validation subset; new routing-error and sketch-failure evidence paths",
+  "report_improvements": [
+    "larger legible evidence labels",
+    "first four paired examples per sketch style",
+    "four lowest-PSNR sketch failures",
+    "incorrect hard routing cases with oracle versus predicted PSNR",
+    "manual final visual interpretation still required",
+    "Explicit per-severity PSNR/objective comparisons against unchanged corrupted inputs and clean identity reference"
+  ],
+  "cpu_layout_checks": {
+    "disposable_output_max_difference": 5.960464477539063e-08,
+    "trained_output_max_difference": 2.980232238769531e-07,
+    "resume_export_api": "passed",
+    "pipeline_checks": "19 checks passed in broad run; corrected new-file checksum reference and resume/export/API check then passed"
+  },
+  "training_session": 62170,
+  "training_process_id": 5236,
+  "cpu_layout_transition": {
+    "after_completed_epoch": 9,
+    "format": "channels_last",
+    "architecture_data_loss_schedule": "unchanged",
+    "resume": "optimizer and RNG restored from last checkpoint",
+    "validation_before_transition": {
+      "train_loss": 0.1010248314427293,
+      "validation_objective": 0.09839051842041638,
+      "validation_l1": 0.047766324780557465,
+      "validation_ssim": 0.6991127148918483,
+      "validation_psnr": 23.37974977078645,
+      "seconds": 492.31326508522034,
+      "epoch": 9
+    }
+  },
+  "continuation": {
+    "automation_id": "finish-assignment-model-improvements",
+    "status": "PAUSED",
+    "scope": "existing-thread follow-up checks and remaining authorized local work",
+    "training_runs_independently": true
+  },
+  "heartbeat_checked_utc": "2026-10-04T08:22:03.133403+00:00",
+  "late_validation_visual_review": {
+    "checkpoint_epoch": 22,
+    "path": "docs/screenshots-detail/cpu-universal-late-validation.png",
+    "selection": "same 12 seed-42 validation inputs as early review",
+    "observations": [
+      "Salt noise is substantially removed while animal shape and dominant colors remain",
+      "Fine fur, eyes and background texture remain blurred",
+      "Large masks are filled with smooth approximations, not accurate missing texture",
+      "Clean inputs still lose some fine detail; compare against identity/corrupted-input baseline"
+    ]
+  },
+  "universal_stage_backup": {
+    "path": "delivery_detail\\detail_after_universal.zip",
+    "bytes": 48361602,
+    "sha256": "00a69271df9afa0cdcfa177ea2207e8b9783b630a7663e32f62f553e59221d9a",
+    "crc": "passed"
+  },
+  "specialist_search": {
+    "completed": 3,
+    "best_trial": 0,
+    "best_value": 0.13231726220498483,
+    "budget": {
+      "epochs": 3,
+      "train_batches": 40,
+      "validation_batches": 40
+    }
+  },
+  "current_training": {
+    "task": "all",
+    "phase": "complete"
+  },
+  "completed_salt": {
+    "epochs": 20,
+    "best": {
+      "train_loss": 0.07208711581061715,
+      "validation_objective": 0.06756191176996715,
+      "validation_l1": 0.034639661483790565,
+      "validation_ssim": 0.8007490937260614,
+      "validation_psnr": 26.282819001570992,
+      "seconds": 182.80974793434143,
+      "epoch": 20
+    },
+    "checkpoint_sha256": "cd2078708515d572fc454f4ccf98321ebe8ce134f98ff9a640b443dffc55591c",
+    "previous_same_condition_validation_objective": 0.23803158721252196,
+    "validation_reduction_percent": 71.61640916604661,
+    "visual_review": "12 seed-42 validation examples filtered to salt conditions: strong impulse-noise reduction and preserved shapes/colors, but softened fur/eyes/background detail",
+    "grid": "docs/screenshots-detail/cpu-salt-completed-validation.png"
+  },
+  "completed_blur": {
+    "epochs": 20,
+    "best": {
+      "train_loss": 0.06813092878007371,
+      "validation_objective": 0.06829934443036716,
+      "validation_l1": 0.03455435697907123,
+      "validation_ssim": 0.7967207120812457,
+      "validation_psnr": 26.32243515788645,
+      "seconds": 190.89427399635315,
+      "epoch": 18
+    },
+    "checkpoint_sha256": "efa1eadafcc2983ad6d1085f089c1d27d1663dcc53fbfc3361d8f6ece279fbe6",
+    "previous_same_condition_validation_objective": 0.23809641278146407,
+    "validation_reduction_percent": 71.31441686479525,
+    "visual_review": "12 seed-42 blur-only validation examples: preserved dominant colors/shapes, uneven edge recovery, softened fine texture and occasional colour/edge artifacts; lightly blurred inputs can lose detail",
+    "grid": "docs/screenshots-detail/cpu-blur-completed-validation.png"
+  },
+  "completed_occlusion": {
+    "epochs": 20,
+    "best": {
+      "train_loss": 0.1038181114455928,
+      "validation_objective": 0.09864341176074484,
+      "validation_l1": 0.05150644357005755,
+      "validation_ssim": 0.7128087256265723,
+      "validation_psnr": 21.937913507655047,
+      "seconds": 122.2443835735321,
+      "epoch": 18
+    },
+    "visual_review": "12 seed-42 occlusion-only validation images inspected: masks are replaced with smooth approximate colors/shapes, but missing face/background detail is inaccurate; unmasked fine texture is softened and large masks sometimes leave discolored patches.",
+    "grid": "docs/screenshots-detail/cpu-occlusion-completed-validation.png"
+  },
+  "soft_search": {
+    "completed": 2,
+    "pruned": 1,
+    "best_trial": 1,
+    "best_value": 0.06718063950538636
+  },
+  "specialists_stage_backup": {
+    "path": "delivery_detail/detail_after_specialists.zip",
+    "sha256": "657759143ef05029cd3b0aab7cfd2d864584b52f855e3477b205a466e8e87890",
+    "crc": "passed",
+    "files": 204
+  },
+  "completed_soft": {
+    "epochs": 12,
+    "best": {
+      "train_reconstruction": 0.03165259123172449,
+      "train_structural": 0.15459070646244547,
+      "train_classification": 0.1449376219559623,
+      "train_balance": 0.010787518098210136,
+      "train_loss": 0.0781127582911564,
+      "validation_objective": 0.06421759860671085,
+      "validation_l1": 0.035065868585977863,
+      "validation_ssim": 0.8191754869792772,
+      "validation_psnr": 27.493296266638716,
+      "validation_weight_0": 0.2799077332019806,
+      "validation_weight_1": 0.29686200618743896,
+      "validation_weight_2": 0.1848698854446411,
+      "validation_weight_3": 0.23836037516593933,
+      "seconds": 485.9450874328613,
+      "epoch": 11
+    }
+  },
+  "soft_stage_backup": {
+    "path": "delivery_detail/detail_after_soft.zip",
+    "bytes": 173518101,
+    "sha256": "690bc7056a7ccaa1894e9ff6128dd07064581f445aeae9cd792b30faeb09f7ef",
+    "crc": "passed"
+  },
+  "final_test_session": 7949,
+  "final_test": {
+    "complete": true,
+    "pet_inputs": 36690,
+    "face_pairs": 1046,
+    "historical_evaluation_number": 3
+  },
+  "container_verification": "passed all four workspaces, three sketch styles, deterministic corruption, 50 tracking runs",
+  "local_delivery": {
+    "path": "delivery/Assignment_Delivery.zip",
+    "bytes": 447237446,
+    "sha256": "b002492d0ec3da3c3649cbe70c4790dae68f52c91f95c4d86f0ccde661fbea3e",
+    "crc": "passed",
+    "member_checksums": "passed",
+    "frozen_test_checkpoint_match": true
+  },
+  "demo": {
+    "duration_seconds": 395.357,
+    "actual_browser_frames": 83,
+    "mean_interval_seconds": 4.76333734939759,
+    "longest_interval_seconds": 28.384,
+    "format": "Timestamped low-frame-rate capture of real browser operations; observed gaps preserved",
+    "native_screen_recording": false,
+    "full_decode_passed": true,
+    "narration": "Windows synthesized speech",
+    "publication": "pending"
+  },
+  "report": {
+    "pages": 16,
+    "compiled": true,
+    "all_pages_visually_reviewed": true,
+    "identity_placeholders": true
+  }
+}

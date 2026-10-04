@@ -1,0 +1,27 @@
+{
+  "universal_manifest_sha256": {
+    "raw_same": false,
+    "newline_normalized_same": true
+  },
+  "universal_validation_sha256": {
+    "raw_same": false,
+    "newline_normalized_same": true
+  },
+  "classifier_manifest_sha256": {
+    "raw_same": false,
+    "newline_normalized_same": true
+  },
+  "classifier_validation_sha256": {
+    "raw_same": false,
+    "newline_normalized_same": true
+  },
+  "gan_manifest_sha256": {
+    "raw_same": false,
+    "newline_normalized_same": true
+  },
+  "gan_validation_sha256": {
+    "raw_same": false,
+    "newline_normalized_same": true
+  },
+  "interpretation": "All six baseline training/validation hashes match local files after only CRLF-to-LF normalization; image membership and corruption configurations are identical."
+}

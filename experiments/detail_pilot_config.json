@@ -1,0 +1,10 @@
+{
+  "base": 24,
+  "latent": 4096,
+  "dropout": 0.0,
+  "batch_size": 32,
+  "lr": 0.001,
+  "weight_decay": 1e-05,
+  "alpha": 0.8,
+  "detail": true
+}

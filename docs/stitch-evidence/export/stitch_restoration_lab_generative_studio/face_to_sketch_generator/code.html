@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500;600&amp;family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error-container":"#ffdad6","on-tertiary-container":"#e4885e","on-tertiary-fixed":"#360f00","on-tertiary-fixed-variant":"#76330f","surface-container-high":"#e1ebe3","surface-dim":"#d2ddd5","on-primary-container":"#83a890","background":"#f2fcf4","secondary":"#40674c","inverse-surface":"#29322d","inverse-on-surface":"#e9f3eb","on-secondary-fixed-variant":"#294e35","surface-container":"#e6f0e8","primary-fixed-dim":"#a9cfb6","surface-bright":"#f2fcf4","on-surface":"#151d19","surface-container-lowest":"#ffffff","on-secondary-fixed":"#00210e","on-background":"#151d19","secondary-container":"#bfeac8","surface-container-low":"#ecf6ee","surface-container-highest":"#dbe5dd","inverse-primary":"#a9cfb6","primary-fixed":"#c5ecd2","on-error-container":"#93000a","on-secondary":"#ffffff","on-primary-fixed-variant":"#2c4e3b","primary":"#032717","on-error":"#ffffff","on-secondary-container":"#446b50","on-surface-variant":"#424843","tertiary-container":"#612301","on-primary":"#ffffff","tertiary":"#3f1300","tertiary-fixed-dim":"#ffb595","tertiary-fixed":"#ffdbcd","outline-variant":"#c1c8c1","outline":"#727973","on-primary-fixed":"#002112","primary-container":"#1b3d2b","error":"#ba1a1a","surface-tint":"#436651","surface":"#f2fcf4","secondary-fixed":"#c2edcb","surface-variant":"#dbe5dd","secondary-fixed-dim":"#a6d1b0","on-tertiary":"#ffffff"},borderRadius:{"DEFAULT":"0.125rem","lg":"0.25rem","xl":"0.5rem","full":"0.75rem"},spacing:{"space-xl":"2.25rem","space-md":"1rem","gutter-desktop":"1.5rem","space-sm":"0.5rem","gutter":"1.25rem","margin-desktop":"2.5rem","margin-tablet":"1.5rem","margin":"1rem","space-xs":"0.25rem","space-lg":"1.5rem"},fontFamily:{"title-md":["Inter"],"metric-lg":["JetBrains Mono"],"headline-lg":["Newsreader"],"metric-sm":["JetBrains Mono"],"display-lg":["Newsreader"],"display-lg-mobile":["Newsreader"],"body-md":["Inter"],"body-lg":["Inter"],"body-sm":["Inter"],"label-caps":["Inter"],"headline-md":["Newsreader"],"metric-md":["JetBrains Mono"],"headline-lg-mobile":["Newsreader"]},fontSize:{"title-md":["1.0625rem",{"lineHeight":"1.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"metric-lg":["1.25rem",{"lineHeight":"1.5rem","letterSpacing":"-0.02em","fontWeight":"500"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.015em","fontWeight":"500"}],"metric-sm":["0.75rem",{"lineHeight":"1rem","fontWeight":"400"}],"display-lg":["2.75rem",{"lineHeight":"3.25rem","letterSpacing":"-0.02em","fontWeight":"500"}],"display-lg-mobile":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"500"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","fontWeight":"400"}],"body-lg":["1rem",{"lineHeight":"1.625rem","fontWeight":"400"}],"body-sm":["0.8125rem",{"lineHeight":"1.25rem","fontWeight":"400"}],"label-caps":["0.6875rem",{"lineHeight":"0.875rem","letterSpacing":"0.06em","fontWeight":"600"}],"headline-md":["1.375rem",{"lineHeight":"1.875rem","fontWeight":"600"}],"metric-md":["0.875rem",{"lineHeight":"1.25rem","fontWeight":"500"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased selection:bg-secondary-container selection:text-on-secondary-container"><aside class="fixed left-0 top-0 h-full w-80 bg-primary text-surface flex flex-col z-50 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="p-space-lg bg-primary-container"><div class="flex items-center gap-space-sm mb-space-xs"><div class="w-7 h-7 rounded bg-secondary-container flex items-center justify-center text-primary"><span class="material-symbols-outlined text-[18px]">biotech</span></div><span class="font-headline-md text-headline-md text-inverse-on-surface tracking-tight">Restoration Lab</span></div><p class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-wider">Generative Vision &amp; Inverse Problems</p></div><div class="px-space-lg pt-space-lg pb-space-xs"><span class="font-label-caps text-label-caps text-on-primary-container uppercase tracking-wider">Research Workspaces</span></div><nav class="flex-1 px-space-md py-space-xs space-y-space-xs" data-active-classes="bg-primary-container text-primary-fixed border-l-2 border-primary-fixed pl-[14px] font-medium"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-primary-container/60 hover:text-on-primary transition-colors text-body-sm font-body-sm" data-path="universal" href="#"><span class="material-symbols-outlined text-[18px]">blur_on</span><span>Universal Restoration</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-primary-container/60 hover:text-on-primary transition-colors text-body-sm font-body-sm" data-path="hard-routed" href="#"><span class="material-symbols-outlined text-[18px]">alt_route</span><span>Hard-Routed Restoration</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-primary-fixed-dim hover:bg-primary-container/60 hover:text-on-primary transition-colors text-body-sm font-body-sm" data-path="soft-moe" href="#"><span class="material-symbols-outlined text-[18px]">hub</span><span>Soft MoE Restoration</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg transition-colors bg-primary-container text-primary-fixed border-l-2 border-primary-fixed pl-[14px] font-medium" data-path="face-sketch" href="#"><span class="material-symbols-outlined text-[18px]">draw</span><span>Face-to-Sketch Generator</span></a></nav><div class="p-space-md space-y-space-sm bg-primary/95"><div class="bg-primary-container/80 rounded-lg p-space-sm"><div class="flex items-center justify-between text-on-primary-container mb-space-xs"><span class="font-label-caps text-label-caps uppercase">Weights / Checkpoint</span><span class="font-metric-sm text-metric-sm text-secondary-fixed">Active</span></div><div class="font-metric-sm text-metric-sm text-surface truncate">v4.2-ViT-Restormer</div><div class="font-metric-sm text-metric-sm text-primary-fixed-dim mt-space-xs flex items-center gap-space-xs"><span class="material-symbols-outlined text-[14px]">memory</span><span>GPU: A100-SXM4-80GB</span></div></div><div class="flex items-center justify-between px-space-sm py-space-xs"><button class="flex items-center gap-space-xs text-primary-fixed-dim hover:text-on-primary text-body-sm font-body-sm transition-colors" type="button"><span class="material-symbols-outlined text-[16px]">history_edu</span><span>Experiment Log</span></button><span class="font-metric-sm text-metric-sm bg-primary-container text-on-primary-container px-space-xs rounded">#142</span></div><div class="flex items-center justify-between px-space-sm py-space-xs bg-primary-container/40 rounded"><a class="flex items-center gap-space-xs text-on-primary-container hover:text-surface transition-colors" href="#"><span class="material-symbols-outlined text-[15px]">menu_book</span><span class="font-metric-sm text-metric-sm">arXiv:2403.08192</span></a><span class="font-metric-sm text-metric-sm text-secondary-fixed bg-secondary/30 px-space-xs rounded">Cite: 38</span></div><div class="pt-space-xs flex items-center justify-between px-space-sm"><div class="flex items-center gap-space-xs"><span class="w-2 h-2 rounded-full bg-secondary-fixed animate-pulse"></span><span class="font-metric-sm text-metric-sm text-primary-fixed-dim">GPU Online</span></div><span class="font-metric-sm text-metric-sm text-on-primary-container">42ms ping</span></div></div></aside><div class="pl-80"><header class="fixed top-0 left-80 right-0 h-16 bg-surface/85 backdrop-blur-xl z-40 shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 w-full px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs text-body-sm font-body-sm text-on-surface-variant"><span class="material-symbols-outlined text-[16px] text-secondary">account_tree</span><span class="text-on-surface-variant">Workspace</span><span class="text-outline">/</span><span class="font-metric-md text-metric-md text-on-surface font-medium">Restoration Lab</span></div><div class="flex items-center gap-space-xs px-space-sm py-0.5 rounded bg-surface-container text-on-surface"><span class="material-symbols-outlined text-[14px] text-secondary">science</span><span class="font-metric-sm text-metric-sm font-medium">#EXP-8041</span></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 rounded bg-surface-container-low text-on-surface-variant text-body-sm font-body-sm"><span class="material-symbols-outlined text-[16px] text-primary">school</span><span class="font-label-caps text-label-caps uppercase text-on-surface">Stanford Vision &amp; Comp Lab</span></div><div class="flex items-center rounded-lg bg-surface-container p-0.5"><button class="px-space-sm py-1 rounded text-body-sm font-body-sm bg-surface-container-lowest text-on-surface shadow-[0_1px_8px_rgba(0,0,0,0.04)]" type="button">Compare View</button><button class="px-space-sm py-1 rounded text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface" type="button">Error Heatmap</button></div><div class="h-4 w-px bg-outline-variant"></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="relative pt-16 bg-surface w-full min-h-screen"><div class="flex flex-col w-full">
+<!-- Subtle laboratory atmospheric glow -->
+<div class="relative w-full overflow-hidden p-space-lg">
+<div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-secondary-container/20 blur-3xl pointer-events-none"></div>
+<div class="absolute top-1/2 right-10 w-80 h-80 rounded-full bg-primary-fixed-dim/15 blur-3xl pointer-events-none"></div>
+<!-- Page Context Title & Scientific Monograph Abstract -->
+<div class="mb-space-lg">
+<div class="flex flex-wrap items-center justify-between gap-space-sm mb-space-xs">
+<div class="flex items-center gap-space-xs text-secondary font-label-caps text-label-caps uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Latent Space Inversion · Task 04/B</span>
+<span class="text-outline">/</span>
+<span class="font-metric-sm text-metric-sm text-on-surface-variant">Archival Synthesis Monograph</span>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-0.5 rounded bg-surface-container-high text-on-surface text-metric-sm font-metric-sm">
+<span class="material-symbols-outlined text-[14px] text-secondary">tune</span>
+            Priors: ViT-B/16-LDM
+          </span>
+<span class="inline-flex items-center gap-1 px-space-sm py-0.5 rounded bg-secondary-container text-on-secondary-container text-metric-sm font-metric-sm font-medium">
+            ArcFace v2 Online
+          </span>
+</div>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight mb-space-xs">
+        Face-to-Sketch Neural Synthesis
+      </h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-4xl">
+        Bidirectional geometric inverse mapping transferring facial landmarks, illumination, and structural contours into fine artistic pencil, charcoal, and forensic anatomical sketches using paired latent diffusion priors.
+      </p>
+</div>
+<!-- Toggleable Checkpoint State Banner -->
+<div class="mb-space-lg rounded-xl bg-surface-container-high text-on-surface shadow-sm transition-all duration-300 overflow-hidden" id="checkpoint-warning-banner">
+<div class="px-space-md py-space-sm flex flex-col md:flex-row items-start md:items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-8 h-8 rounded-lg bg-surface-container-lowest flex items-center justify-center text-tertiary flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">warning</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-tertiary">Fallback Mode Engaged</span>
+<span class="text-outline-variant font-metric-sm text-metric-sm">•</span>
+<span class="font-metric-sm text-metric-sm text-on-surface-variant truncate">Runtime Alert: Node #GPU-0</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+              Warning: Specialist weights <code class="font-metric-sm text-metric-sm px-1 py-0.5 rounded bg-surface-container text-on-surface">sketch_charcoal_v2.ckpt</code> unmounted from <span class="font-metric-sm text-metric-sm text-secondary">/weights/models/</span> — falling back to CPU float32 emulator with reduced perceptual rendering pass.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-xs flex-shrink-0 self-end md:self-center">
+<button class="px-space-sm py-1 rounded-lg bg-primary text-on-primary font-body-sm text-body-sm hover:bg-primary-container transition-all flex items-center gap-1 shadow-sm" id="mount-checkpoint-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">cloud_sync</span>
+            Mount via S3
+          </button>
+<button class="p-1 rounded text-on-surface-variant hover:text-on-surface" onclick="document.getElementById('checkpoint-warning-banner').style.display='none'">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Two-Column Workbench Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: CONTROLS & CAPTURE RAIL (5 cols) -->
+<div class="xl:col-span-5 flex flex-col space-y-space-md">
+<!-- Input Mode & Camera Station Card -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<!-- Source Tabs -->
+<div class="flex items-center justify-between mb-space-md">
+<div class="inline-flex p-1 rounded-lg bg-surface-container">
+<button class="px-space-sm py-1 rounded text-body-sm font-body-sm text-on-surface-variant hover:text-on-surface transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">upload_file</span>
+                Upload Photo
+              </button>
+<button class="px-space-sm py-1 rounded text-body-sm font-body-sm bg-surface-container-lowest text-primary font-medium shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">videocam</span>
+                Webcam Live Capture
+              </button>
+</div>
+<!-- Telemetry Indicator -->
+<div class="flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-surface-container-low text-on-surface">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-metric-sm text-metric-sm text-secondary">30 FPS</span>
+</div>
+</div>
+<!-- Video Stream Simulation Canvas Area -->
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-primary shadow-inner">
+<!-- Simulated Face Stream -->
+<img class="absolute inset-0 w-full h-full object-cover opacity-90 select-none pointer-events-none" data-alt="High quality clean editorial passport portrait of a young woman with natural studio lighting looking forward with neutral expression against soft muted neutral background for computational facial landmark analysis." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDcKm4j95AHwQX1hD5puknyxtyHbpdTZFxbfBjSKbBHjuX7-lKHysd1Ab9jneonoJLeWwauqK_CK40aUkvRYbwJLkuoHsUXN1pTpztL42PwUq7Qwotzc69jw4-iTl_AlZdZ_tbWLd3ZPfSRj7Mb2ZoXbAm4oZB-rMX0i45w5Q_CVerWOw5neLo9E1AfH10JW3IhjxDXgem2XJvEX9lzISXpb013WDua-Yg5XfrctwrkAr_-LPxnHzE1Hw"/>
+<!-- MediaPipe 68 Facial Landmark Points Overlay (SVG overlay) -->
+<svg class="absolute inset-0 w-full h-full pointer-events-none" fill="none" viewbox="0 0 400 300">
+<!-- Bounding box with tracked brackets -->
+<rect height="230" opacity="0.85" rx="4" stroke="#40674c" stroke-dasharray="4 3" stroke-width="1.5" width="210" x="95" y="42"></rect>
+<text fill="#c2edcb" font-family="JetBrains Mono" font-size="9" letter-spacing="0.05em" x="102" y="58">ID: FACE#01 · 99.4%</text>
+<!-- Landmark Nodes (Forehead, Jaw, Eyebrows, Eyes, Nose, Mouth) -->
+<!-- Jawline points -->
+<circle cx="115" cy="140" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="120" cy="170" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="130" cy="200" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="150" cy="230" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="180" cy="250" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="200" cy="255" fill="#c2edcb" r="2"></circle>
+<circle cx="220" cy="250" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="250" cy="230" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="270" cy="200" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="280" cy="170" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="285" cy="140" fill="#a9cfb6" r="1.5"></circle>
+<!-- Left Eyebrow -->
+<path d="M135 118 Q155 110 175 116" fill="none" opacity="0.6" stroke="#c2edcb" stroke-linecap="round" stroke-width="1"></path>
+<circle cx="135" cy="118" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="155" cy="111" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="175" cy="116" fill="#a9cfb6" r="1.5"></circle>
+<!-- Right Eyebrow -->
+<path d="M225 116 Q245 110 265 118" fill="none" opacity="0.6" stroke="#c2edcb" stroke-linecap="round" stroke-width="1"></path>
+<circle cx="225" cy="116" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="245" cy="111" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="265" cy="118" fill="#a9cfb6" r="1.5"></circle>
+<!-- Left Eye -->
+<ellipse cx="155" cy="132" fill="none" opacity="0.7" rx="14" ry="7" stroke="#c2edcb" stroke-width="1"></ellipse>
+<circle cx="155" cy="132" fill="#ffdbcd" r="2"></circle>
+<!-- Right Eye -->
+<ellipse cx="245" cy="132" fill="none" opacity="0.7" rx="14" ry="7" stroke="#c2edcb" stroke-width="1"></ellipse>
+<circle cx="245" cy="132" fill="#ffdbcd" r="2"></circle>
+<!-- Nose Bridge and Bulb -->
+<path d="M200 120 L200 165 L188 178 L200 182 L212 178 Z" fill="none" opacity="0.7" stroke="#c2edcb" stroke-width="1"></path>
+<circle cx="200" cy="182" fill="#c2edcb" r="2"></circle>
+<!-- Mouth Contours -->
+<path d="M165 210 Q200 204 235 210 Q200 228 165 210 Z" fill="none" opacity="0.8" stroke="#c2edcb" stroke-width="1.2"></path>
+<path d="M165 210 Q200 216 235 210" fill="none" stroke="#a9cfb6" stroke-width="0.8"></path>
+<circle cx="165" cy="210" fill="#a9cfb6" r="1.5"></circle>
+<circle cx="235" cy="210" fill="#a9cfb6" r="1.5"></circle>
+</svg>
+<!-- Status HUD Overlay -->
+<div class="absolute top-space-sm left-space-sm flex items-center gap-1.5 px-space-xs py-0.5 rounded bg-inverse-surface/85 backdrop-blur-md text-surface text-metric-sm font-metric-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-ping"></span>
+<span>Live • 68 Pts Mesh Tracked</span>
+</div>
+<div class="absolute top-space-sm right-space-sm flex items-center gap-1 px-space-xs py-0.5 rounded bg-inverse-surface/85 backdrop-blur-md text-primary-fixed-dim text-metric-sm font-metric-sm">
+<span class="material-symbols-outlined text-[13px]">view_in_ar</span>
+<span>MediaPipe FaceMesh</span>
+</div>
+<!-- Bottom Floating Capture Strip -->
+<div class="absolute bottom-space-sm left-space-sm right-space-sm p-space-xs rounded-lg bg-surface/90 backdrop-blur-md flex items-center justify-between gap-space-xs shadow-md">
+<div class="flex items-center gap-space-xs">
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-metric-sm text-metric-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">flip_camera_ios</span>
+<span>FaceTime HD</span>
+</button>
+<label class="flex items-center gap-1 cursor-pointer font-metric-sm text-metric-sm text-on-surface-variant">
+<input checked="" class="accent-secondary rounded" type="checkbox"/>
+<span>Mirror</span>
+</label>
+</div>
+<!-- Shutter Trigger -->
+<button class="px-space-md py-1.5 rounded bg-primary text-on-primary font-body-sm text-body-sm font-medium hover:bg-primary-container transition-all flex items-center gap-1.5 shadow-sm active:scale-95" id="capture-shutter-btn" type="button">
+<span class="material-symbols-outlined text-[16px]">camera</span>
+<span>Capture Frame</span>
+</button>
+</div>
+</div>
+<!-- Captured Snapshot Thumbnail Strip & Feedback -->
+<div class="mt-space-md pt-space-sm flex items-center justify-between bg-surface-container-low p-space-xs rounded-lg">
+<div class="flex items-center gap-space-sm">
+<div class="relative w-12 h-12 rounded overflow-hidden shadow-sm flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Cropped square portrait snapshot of female subject with high resolution detail of eyes, skin and hair contour." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwrJrwmaETwJpRyZQWVzxkobHlrbYj54L90V4aICBDjfuh4E5tjIm-SriNuasrpRb7AP4pbe6QJavj80uG1lrSfebgErLB9ZrgLz2juhjhJdW1-Hv19dXoOqzZeIInMaeRuQ4I0qhyliJMnkDDeYX1hxhJwIT0nOztzOBtjgVx2lO8u4fk64ZexmlNnoR5MpchEOyx9DGrwhrDPDxaEnOrPJMcxcQ4HGHJgneyP_zQtDKJcyMbqgO6Eg"/>
+<div class="absolute inset-0 bg-secondary/10"></div>
+</div>
+<div class="min-w-0">
+<div class="font-body-sm text-body-sm font-medium text-on-surface flex items-center gap-1">
+<span>Frame_#0921_L.raw</span>
+<span class="material-symbols-outlined text-secondary text-[15px]">verified</span>
+</div>
+<div class="font-metric-sm text-metric-sm text-on-surface-variant">
+                  512 × 512 px • Landmarks: 68 Lock
+                </div>
+</div>
+</div>
+<button class="px-space-sm py-1 rounded bg-surface-container-lowest text-on-surface-variant hover:text-on-surface text-body-sm font-body-sm transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">replay</span>
+<span>Retake</span>
+</button>
+</div>
+</div>
+<!-- Artistic Style Matrix Selection -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">brush</span>
+<h2 class="font-title-md text-title-md text-on-surface">Target Artistic Medium</h2>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">3 Presets Loaded</span>
+</div>
+<div class="space-y-space-xs" id="style-selector-group">
+<!-- Style 1: Forensic Pencil Contour -->
+<label class="style-choice-card block relative p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<input class="hidden peer" name="artistic_style" type="radio" value="pencil"/>
+<div class="flex items-center gap-space-md peer-checked:text-primary">
+<div class="w-16 h-16 rounded overflow-hidden flex-shrink-0 bg-surface shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Forensic style fine graphite pencil contour drawing of a face on off-white paper, delicate 0.3mm mechanical pencil lines, accurate forensic facial reconstruction with cross-hatching, high detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCVYGLfegKvWOgapo8tMabtzviF1_QWPEJd536vPwEv6cWbCSSNviVJtqLcoFCtv8ZaXK5A0cAf0vWTH3Ggd1ibB_GDC97V02ZJSXxSL9hUF5FzZsOPw2jlZOffQBtCeH3fW_B3FxakpK68tifigd3WqX75lHaUpp1qmVByTrfl3lG0rlz6zkJl8hz6MW4O7sW9WWP_OefXbI9ol8ESKe_twMg45nG9z0QDjEqsAeZkERyRgJMcQBsIBA"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-on-surface">1. Forensic Pencil Contour</span>
+<span class="font-metric-sm text-metric-sm text-secondary bg-secondary-container/50 px-1.5 py-0.5 rounded">0.3mm Lead</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+                    Fine graphite lines, high structural fidelity, cross-hatch shading, mechanical pencil aesthetic.
+                  </p>
+<div class="mt-1 flex items-center gap-space-xs font-metric-sm text-metric-sm text-on-surface-variant">
+<span>Fidelity: 98%</span> • <span>Cross-Hatch: Active</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center text-primary-fixed peer-checked:bg-primary peer-checked:text-on-primary">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+</div>
+</label>
+<!-- Style 2: Academic Charcoal & Chiaroscuro (Active by default) -->
+<label class="style-choice-card block relative p-space-sm rounded-lg bg-surface-container transition-all cursor-pointer">
+<input checked="" class="hidden peer" name="artistic_style" type="radio" value="charcoal"/>
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded overflow-hidden flex-shrink-0 bg-surface shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Renaissance anatomical charcoal study of a portrait face, heavy chiaroscuro lighting, soft smudged dark black values on aged textured ivory parchment, Leonardo da Vinci sketchbook aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6P6vo5SAa0M7HlXaarRywhPhxXlXx4mzBieJIZcKZxavivN13NJXv30kSwrYvTzwcVbnMyV6MqxrhDgn-HEYsSqQ68iM6hrQwr1GlA8fyMpieD7EywclJkgX-sMEn6n-4FaSgrji3F6PRpbPLsCZ9qCeZoETseCQvd8CIQ33Nhtnf1IpoimyFBMtmuXiouVwiRsF8bVWWz29LK83pI4YW7bvmCRQbNxBAafDG6giMtn-VudW-vHLJaQ"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-on-surface">2. Academic Charcoal &amp; Chiaroscuro</span>
+<span class="font-metric-sm text-metric-sm text-primary bg-secondary-container px-1.5 py-0.5 rounded font-medium">Selected</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+                    Rich dark values, dramatic chiaroscuro illumination, soft blending, Da Vinci anatomical study aesthetic.
+                  </p>
+<div class="mt-1 flex items-center gap-space-xs font-metric-sm text-metric-sm text-on-surface-variant">
+<span>Dynamic Range: 14 EV</span> • <span>Smudge Diffusion: 0.62</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+</div>
+</label>
+<!-- Style 3: Architectural Stippling & Ink -->
+<label class="style-choice-card block relative p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-all cursor-pointer">
+<input class="hidden peer" name="artistic_style" type="radio" value="stipple"/>
+<div class="flex items-center gap-space-md">
+<div class="w-16 h-16 rounded overflow-hidden flex-shrink-0 bg-surface shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Micron technical ink drawing portrait composed strictly of dense microscopic dot stippling and crisp rapidograph drafting contours, high-contrast black ink on crisp white museum board." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx_6EZOV2hf_gk45HQ7HB92Ke1S_6suzsasXrR8_8ZJBH0fsYAbH6w3nonKYG5cuH_IPhsyotqYBiUYTa6sOEkwPL0T0bBz2hBXEuDdqeL0YfOzNQYgquSFSbGW-bssZZbqY3ZxTJ1JpAMeuZv2M-wgP2fQsdo0SDNpZ8gzNqPXeEJCt3gzafvo8anbubD5V-qeo1c_b9MyNAh4duZUclfgrzx08hyRVICv8-VrsGRDCAOYT2R1-EYUg"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md font-semibold text-on-surface">3. Architectural Stippling &amp; Ink</span>
+<span class="font-metric-sm text-metric-sm text-on-surface-variant bg-surface-container px-1.5 py-0.5 rounded">Rapidograph</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 line-clamp-1">
+                    Precise technical ink dot-work, micro-stippling, strict structural contours.
+                  </p>
+<div class="mt-1 flex items-center gap-space-xs font-metric-sm text-metric-sm text-on-surface-variant">
+<span>Dot Density: 480 DPI</span> • <span>Jitter: 0.05px</span>
+</div>
+</div>
+<div class="w-5 h-5 rounded-full bg-surface-container-highest flex items-center justify-center text-transparent">
+<span class="material-symbols-outlined text-[14px]">check</span>
+</div>
+</div>
+</label>
+</div>
+<!-- Parameter Hyper-Tuning -->
+<div class="mt-space-md pt-space-sm space-y-space-md">
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="font-body-sm text-body-sm text-on-surface font-medium flex items-center gap-1" for="detail-slider">
+<span>Detail Intensity &amp; Stroke Caliber</span>
+</label>
+<span class="font-metric-sm text-metric-sm px-2 py-0.5 rounded bg-surface-container text-primary font-medium" id="slider-val-label">1.6 px</span>
+</div>
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-secondary" id="detail-slider" max="3.0" min="0.5" oninput="document.getElementById('slider-val-label').innerText = this.value + ' px'" step="0.1" type="range" value="1.6"/>
+<div class="flex justify-between font-metric-sm text-metric-sm text-on-surface-variant mt-1">
+<span>0.5 px (Whisper Contour)</span>
+<span>3.0 px (Heavy Graphite/Bolder)</span>
+</div>
+</div>
+<!-- Seed & Hyperparameters Bar -->
+<div class="grid grid-cols-2 gap-space-sm">
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Inference Seed</label>
+<div class="flex items-center rounded-lg bg-surface-container px-space-sm py-1.5">
+<span class="material-symbols-outlined text-outline text-[16px] mr-1.5">casino</span>
+<input class="w-full bg-transparent font-metric-sm text-metric-sm text-on-surface focus:outline-none" type="text" value="77412"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Guidance Scale (λ)</label>
+<div class="flex items-center rounded-lg bg-surface-container px-space-sm py-1.5">
+<span class="material-symbols-outlined text-outline text-[16px] mr-1.5">balance</span>
+<input class="w-full bg-transparent font-metric-sm text-metric-sm text-on-surface focus:outline-none" type="text" value="7.8"/>
+</div>
+</div>
+</div>
+<!-- Execution Action Button -->
+<button class="w-full py-space-sm px-space-md rounded-lg bg-primary text-on-primary font-body-md text-body-md font-semibold hover:bg-primary-container transition-all flex items-center justify-center gap-2 shadow-sm active:scale-[0.99]" id="generate-trigger-btn" type="button">
+<span class="material-symbols-outlined text-[18px]">auto_fix_high</span>
+<span>Synthesize Sketch Latent Prior</span>
+</button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: INSPECTION, DUAL-VIEWPORT & EVALUATION (7 cols) -->
+<div class="xl:col-span-7 flex flex-col space-y-space-md">
+<!-- Main Comparison Double-Buffered Viewport -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex flex-wrap items-center justify-between gap-space-xs mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="w-2.5 h-2.5 rounded bg-primary"></span>
+<h2 class="font-headline-md text-headline-md text-primary">Reconstruction Workbench</h2>
+</div>
+<div class="flex items-center gap-space-xs">
+<div class="flex items-center rounded-lg bg-surface-container p-0.5">
+<button class="px-space-xs py-1 rounded font-metric-sm text-metric-sm bg-surface-container-lowest text-on-surface shadow-sm" type="button">Side-by-Side</button>
+<button class="px-space-xs py-1 rounded font-metric-sm text-metric-sm text-on-surface-variant hover:text-on-surface" type="button">Split Curtain</button>
+<button class="px-space-xs py-1 rounded font-metric-sm text-metric-sm text-on-surface-variant hover:text-on-surface" type="button">Mesh Alpha</button>
+</div>
+<button class="p-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface-variant transition-colors" title="Toggle Fullscreen Canvas">
+<span class="material-symbols-outlined text-[16px]">fullscreen</span>
+</button>
+</div>
+</div>
+<!-- Dual Tensor Comparison Canvas -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm bg-surface-container-low p-space-sm rounded-lg">
+<!-- Left Pane: Captured Ground Truth -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                  Raw Optical Capture ($I_{opt}$)
+                </span>
+<span class="font-metric-sm text-metric-sm text-on-surface-variant">RGB • 8-Bit</span>
+</div>
+<div class="relative w-full aspect-square rounded overflow-hidden bg-inverse-surface shadow-inner group">
+<img class="w-full h-full object-cover" data-alt="Crystal clear frontal high key studio photo of a female face with direct eye contact, clean skin textures, soft shadow illumination, ideal input portrait for generative pencil rendering." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAyNiG3XDrgjeim8MI-49jFDvOs-fblDeBAkLwlCNnKn5yuh3putXc0ODpWo2AH7Vljr_6qtKrm2KL8WkyVzJpGtLpD2ZEUegwZl_MVrPo6r0dCo_Cm-rp5WJ9oRqxHeJIkpq-K-rzaxSiO-qZkqTay3y2ZDhkiFJYI3yVwJs34j2hPxBKDvsiG5JzPtnnCfvBZJr1aQuPvjBlaK8YZQaLrFu1hIaJjxHMU3ylbBl8N4EIuku61tFN89w"/>
+<!-- Coordinate Overlay Crosshairs -->
+<div class="absolute inset-0 pointer-events-none opacity-20">
+<div class="w-full h-px bg-surface absolute top-1/2 left-0"></div>
+<div class="h-full w-px bg-surface absolute left-1/2 top-0"></div>
+</div>
+<div class="absolute bottom-2 left-2 px-space-xs py-0.5 rounded bg-inverse-surface/80 backdrop-blur text-surface text-metric-sm font-metric-sm">
+                  Latent Tensor: 512 × 512
+                </div>
+</div>
+</div>
+<!-- Right Pane: Synthesized Artistic Sketch -->
+<div class="flex flex-col space-y-space-xs">
+<div class="flex items-center justify-between px-space-xs">
+<span class="font-label-caps text-label-caps uppercase text-primary font-bold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-fixed-dim"></span>
+                  Latent Sketch Synthesis ($\hat{S}$)
+                </span>
+<span class="font-metric-sm text-metric-sm text-secondary bg-secondary-container px-1 rounded font-medium">ViT Prior</span>
+</div>
+<div class="relative w-full aspect-square rounded overflow-hidden bg-surface-container-highest shadow-inner group">
+<img class="w-full h-full object-cover" data-alt="Museum quality master study charcoal and graphite sketch of the female portrait, dramatic academic crosshatch shading, paper grain texture visible, precise facial likeness to original photo, dark velvety charcoal depths." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU8Es18IigSIY3VNgo5pwjGeKU2TwUBxfAEjM2yQ5OOHZ1m3PGNMnOByq5l7r2FX74DjlifkB36g7hGByS8tKAbMHsKhAlXGFXkgVWTGBxGiRXrhoBFCX5z98-6GyFy-U23oRmU1enM1Y5YiXB-OZ8LrcYoA-lDvgCrwY0fkv8SbzCwegQHrQwxYxFvx9JPLDi5Nwkvx_Q_kouc6RCutSrgzKPdqKvvW4A_WwoU1TqefyiBhs3Qu4inA"/>
+<!-- Watermark Badge for Scientific Authenticity -->
+<div class="absolute top-2 right-2 px-space-xs py-0.5 rounded bg-surface/90 backdrop-blur text-primary text-metric-sm font-metric-sm font-medium shadow-sm flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px] text-secondary">brush</span>
+                  Charcoal &amp; Chiaroscuro
+                </div>
+<div class="absolute bottom-2 right-2 px-space-xs py-0.5 rounded bg-inverse-surface/80 backdrop-blur text-surface text-metric-sm font-metric-sm">
+                  Sampling Steps: 40/40
+                </div>
+</div>
+</div>
+</div>
+<!-- Bottom Telemetry HUD Bar -->
+<div class="mt-space-sm p-space-sm rounded-lg bg-surface-container flex flex-wrap items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-lg flex-wrap">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">speed</span>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Inference Latency</div>
+<div class="font-metric-md text-metric-md text-on-surface font-semibold">228 ms <span class="font-metric-sm text-metric-sm text-secondary font-normal">(RTX A100)</span></div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">fingerprint</span>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Identity Preservation</div>
+<div class="font-metric-md text-metric-md text-on-surface font-semibold flex items-center gap-1">
+<span>0.892</span>
+<span class="font-metric-sm text-metric-sm px-1 py-0.2 rounded bg-secondary-container text-on-secondary-container">High Cosine</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[18px] text-secondary">query_stats</span>
+<div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">PSNR / SSIM Index</div>
+<div class="font-metric-md text-metric-md text-on-surface font-semibold">29.4 dB / 0.884</div>
+</div>
+</div>
+</div>
+<!-- Export Buttons Strip -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-1.5 rounded-lg bg-surface-container-lowest text-on-surface hover:bg-surface-container-high transition-colors font-body-sm text-body-sm shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">data_object</span>
+<span>Landmarks (.json)</span>
+</button>
+<div class="relative inline-block">
+<button class="px-space-sm py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container transition-all font-body-sm text-body-sm font-medium shadow-sm flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+<span>Export 300 DPI</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Archival Experiment Ledger & Previous Runs -->
+<div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-secondary text-[18px]">history_toggle_off</span>
+<h3 class="font-title-md text-title-md text-on-surface">Synthesis Run Log</h3>
+<span class="font-metric-sm text-metric-sm bg-surface-container px-1.5 py-0.5 rounded text-on-surface-variant font-medium">Session #8041</span>
+</div>
+<button class="font-metric-sm text-metric-sm text-secondary hover:underline flex items-center gap-0.5" type="button">
+<span>View All 14 Tensors</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</button>
+</div>
+<!-- History Thumbnails Grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-sm">
+<!-- History Card 1 -->
+<div class="group relative rounded-lg bg-surface-container-low p-space-xs hover:bg-surface-container transition-all cursor-pointer">
+<div class="relative aspect-square rounded overflow-hidden mb-space-xs bg-surface shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Miniature square thumbnail of charcoal portrait sketch of an elderly man with intense gaze." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAELfHF39Do8dIkwBfN3mN6TbxzS4y19WBrX3oSo1BwYWC9eomPNqfgNxhB3ewzkmujbc8c1iPmXILAapzIktKB0caKeUZk7X45wD5zFt5UMu2SXulYUZLgo1tleLFQGIgyCPOBl6U3zZFT19Iz_HYuiXLJVL-uheIJ8f7XsBQIcNZnG9I-hds3GVZTjRi87OwMn1rz9JoeRAfpjs9B72fyCQFWGnp2k1CvYvADLQFRk8mJFjUyK-UFOQ"/>
+<span class="absolute top-1 left-1 font-metric-sm text-metric-sm bg-surface/85 px-1 rounded text-primary">#141</span>
+</div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface truncate">Subject_M62_Chiaroscuro</div>
+<div class="flex items-center justify-between font-metric-sm text-metric-sm text-on-surface-variant mt-0.5">
+<span>Pencil 0.8px</span>
+<span class="text-secondary font-medium">0.912 ID</span>
+</div>
+</div>
+<!-- History Card 2 -->
+<div class="group relative rounded-lg bg-surface-container-low p-space-xs hover:bg-surface-container transition-all cursor-pointer">
+<div class="relative aspect-square rounded overflow-hidden mb-space-xs bg-surface shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Miniature square thumbnail of architectural ink stipple drawing of a young woman side profile." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBsA_DP5t6q7qhbNdxlWEBIu7vLM3bO6OvPruWzrXmGEct91juO_Au7eS4E--duICrKcRcSJ9lefH7WsDHppaPU77Wl1L7ilJrndRl5Jta5vFznsquXnggj2yerMOVxNKGE_dRZAUfvqj_zJRLc4uKpuB4wwGM_ud_AdMjopMfpeF7IhEz1Mvgt3L_LYpTtIsU-b6B0aIuBRkgYUhU0idB3uLHOhEfCeM5MLlLH49Y6URrCBZoXI1IQvg"/>
+<span class="absolute top-1 left-1 font-metric-sm text-metric-sm bg-surface/85 px-1 rounded text-primary">#140</span>
+</div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface truncate">Profile_W24_Stipple</div>
+<div class="flex items-center justify-between font-metric-sm text-metric-sm text-on-surface-variant mt-0.5">
+<span>Ink 0.5px</span>
+<span class="text-secondary font-medium">0.874 ID</span>
+</div>
+</div>
+<!-- History Card 3 -->
+<div class="group relative rounded-lg bg-surface-container-low p-space-xs hover:bg-surface-container transition-all cursor-pointer">
+<div class="relative aspect-square rounded overflow-hidden mb-space-xs bg-surface shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Miniature square thumbnail of fine forensic graphite reconstruction portrait with geometric construction guides." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwmSbW-igPVj1cq7vrgOrSMJw9zYqmF5bwfXWiBv7c-mOBbVYUD-a3ZxnndkYLPnqk7sAS23MJ28Wt8eAMW2aXoJl8sahC8sFEvPbqEVXOlAVuG02HOE1nH_oKA_mrDjwGho3j42ElPr13YMGAXmfuqGJM7iX1SSeVPIT4CWII7fgn7XCuSxF32ZQdcYX5lS9FUVtOWngstybSdkOEgbhDmJItIYKwMNmMo9kgWHxYpJXuVobeYtrY2g"/>
+<span class="absolute top-1 left-1 font-metric-sm text-metric-sm bg-surface/85 px-1 rounded text-primary">#139</span>
+</div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface truncate">Forensic_Interpolate_03</div>
+<div class="flex items-center justify-between font-metric-sm text-metric-sm text-on-surface-variant mt-0.5">
+<span>Pencil 0.3mm</span>
+<span class="text-secondary font-medium">0.941 ID</span>
+</div>
+</div>
+<!-- History Card 4 -->
+<div class="group relative rounded-lg bg-surface-container-low p-space-xs hover:bg-surface-container transition-all cursor-pointer">
+<div class="relative aspect-square rounded overflow-hidden mb-space-xs bg-surface shadow-sm">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="Miniature square thumbnail of Leonardo da Vinci style sepia charcoal facial study with anatomical muscular annotations." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT_L3g7-ATcqU0a_VILdz_CpUr5KFD6pBjuKly55aJt8u93ea3Z5cxKOdmyh0Ijn1D1ok0gCLXWRuCfY9HX27N4jyKczKl-cc09Q4cD-2vR6bovDlH7uMjVvy5g2vaY8-cGGZi3cZX3xyynrobDInZZayZwqwhzONfv6dzAnlnqFchvlv5Y-pZwU-vdkengTvIhtHtWLmaoSGaeJvi7gBQpPCME6oYNK_X5ubg-GZfb0d81DYvX6HtTg"/>
+<span class="absolute top-1 left-1 font-metric-sm text-metric-sm bg-surface/85 px-1 rounded text-primary">#138</span>
+</div>
+<div class="font-body-sm text-body-sm font-medium text-on-surface truncate">Sepia_Wash_Study</div>
+<div class="flex items-center justify-between font-metric-sm text-metric-sm text-on-surface-variant mt-0.5">
+<span>Charcoal</span>
+<span class="text-secondary font-medium">0.865 ID</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Scientific Footer Annotation Note -->
+<div class="mt-space-lg pt-space-md flex flex-col md:flex-row items-center justify-between text-on-surface-variant text-body-sm font-body-sm gap-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span>Ethical AI Compliance: ARC-Face Identity vectors anonymized on local session termination.</span>
+</div>
+<div class="font-metric-sm text-metric-sm flex items-center gap-space-md">
+<span>PyTorch v2.3.1+cu121</span>
+<span>CUDA Allocated: 4.8 / 80.0 GB</span>
+</div>
+</div>
+</div>
+<!-- Interactive State Logic Handler -->
+<script>
+    (function initFaceSketchLab() {
+      // Style selector card active states toggling
+      const styleCards = document.querySelectorAll('.style-choice-card');
+      styleCards.forEach(card => {
+        card.addEventListener('click', () => {
+          styleCards.forEach(c => {
+            c.classList.remove('bg-surface-container');
+            c.classList.add('bg-surface-container-low');
+            const checkIcon = c.querySelector('.material-symbols-outlined');
+            if (checkIcon) checkIcon.parentElement.classList.remove('bg-primary', 'text-on-primary');
+          });
+          card.classList.add('bg-surface-container');
+          card.classList.remove('bg-surface-container-low');
+          const radio = card.querySelector('input[type="radio"]');
+          if (radio) radio.checked = true;
+          const indicator = card.querySelector('.rounded-full:last-child');
+          if (indicator) {
+            indicator.className = 'w-5 h-5 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm';
+            indicator.innerHTML = '<span class="material-symbols-outlined text-[14px]">check</span>';
+          }
+        });
+      });
+
+      // Shutter micro-interaction
+      const shutterBtn = document.getElementById('capture-shutter-btn');
+      if (shutterBtn) {
+        shutterBtn.addEventListener('click', () => {
+          shutterBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">sync</span><span>Syncing Frame...</span>';
+          setTimeout(() => {
+            shutterBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span><span>Captured!</span>';
+            setTimeout(() => {
+              shutterBtn.innerHTML = '<span class="material-symbols-outlined text-[16px]">camera</span><span>Capture Frame</span>';
+            }, 1200);
+          }, 450);
+        });
+      }
+
+      // Generate button animation feedback
+      const genBtn = document.getElementById('generate-trigger-btn');
+      if (genBtn) {
+        genBtn.addEventListener('click', () => {
+          const originalContent = genBtn.innerHTML;
+          genBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Sampling Inversion Prior...</span>';
+          genBtn.classList.add('opacity-90');
+          setTimeout(() => {
+            genBtn.innerHTML = '<span class="material-symbols-outlined text-[18px] text-secondary-fixed">done_all</span><span>Completed in 228ms</span>';
+            setTimeout(() => {
+              genBtn.innerHTML = originalContent;
+              genBtn.classList.remove('opacity-90');
+            }, 1800);
+          }, 900);
+        });
+      }
+
+      // S3 Mount action micro interaction
+      const mountBtn = document.getElementById('mount-checkpoint-btn');
+      if (mountBtn) {
+        mountBtn.addEventListener('click', () => {
+          mountBtn.innerHTML = '<span class="material-symbols-outlined text-[16px] animate-spin">refresh</span> Pulling 3.8GB...';
+          setTimeout(() => {
+            const banner = document.getElementById('checkpoint-warning-banner');
+            if (banner) {
+              banner.className = 'mb-space-lg rounded-xl bg-secondary-container text-on-secondary-container shadow-sm transition-all duration-300 p-space-sm flex items-center justify-between';
+              banner.innerHTML = '<div class="flex items-center gap-space-sm font-body-sm text-body-sm font-medium"><span class="material-symbols-outlined text-[20px]">check_circle</span> Specialist weights "sketch_charcoal_v2.ckpt" mounted successfully onto GPU node #0.</div><button onclick="this.parentElement.remove()" class="p-1"><span class="material-symbols-outlined text-[18px]">close</span></button>';
+            }
+          }, 1400);
+        });
+      }
+    })();
+  </script>
+</div></main></div></body></html>

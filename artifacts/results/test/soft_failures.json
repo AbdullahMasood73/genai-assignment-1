@@ -1,0 +1,50 @@
+[
+  {
+    "index": 11438,
+    "id": "Egyptian_Mau_60",
+    "system": "soft",
+    "corruption": "occlusion",
+    "severity": "medium",
+    "l1": 0.16774719953536987,
+    "psnr": 11.634535789489746,
+    "ssim": 0.4194629490375519,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 14777,
+    "id": "german_shorthaired_96",
+    "system": "soft",
+    "corruption": "occlusion",
+    "severity": "low",
+    "l1": 0.09379325062036514,
+    "psnr": 11.880135536193848,
+    "ssim": 0.876670241355896,
+    "predicted": "salt",
+    "routing_correct": false
+  },
+  {
+    "index": 34609,
+    "id": "staffordshire_bull_terrier_92",
+    "system": "soft",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.10991421341896057,
+    "psnr": 12.015701293945312,
+    "ssim": 0.7187358140945435,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 8759,
+    "id": "boxer_91",
+    "system": "soft",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.12961731851100922,
+    "psnr": 12.323369979858398,
+    "ssim": 0.48437461256980896,
+    "predicted": "occlusion",
+    "routing_correct": true
+  }
+]

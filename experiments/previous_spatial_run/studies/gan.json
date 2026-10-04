@@ -1,0 +1,79 @@
+{
+  "task": "gan",
+  "best_trial": 0,
+  "best_value": 0.2260502171966265,
+  "completed": 2,
+  "pruned": 2,
+  "budget": {
+    "epochs": 3,
+    "train_batches": 40,
+    "validation_batches": 20
+  },
+  "search_space": {
+    "batch_size": "CategoricalDistribution(choices=(16, 32, 64))",
+    "lr": "FloatDistribution(high=0.003, log=True, low=0.0001, step=None)",
+    "base": "CategoricalDistribution(choices=(8, 16, 24))",
+    "dropout": "FloatDistribution(high=0.3, log=False, low=0.0, step=None)",
+    "discriminator_lr": "FloatDistribution(high=0.001, log=True, low=0.0001, step=None)",
+    "embedding": "CategoricalDistribution(choices=(4, 8, 16))",
+    "l1_weight": "FloatDistribution(high=150.0, log=False, low=50.0, step=None)"
+  },
+  "trials": [
+    {
+      "number": 0,
+      "state": "COMPLETE",
+      "value": 0.2260502171966265,
+      "params": {
+        "batch_size": 32,
+        "lr": 0.0007661100707771367,
+        "base": 8,
+        "dropout": 0.2598528437324805,
+        "discriminator_lr": 0.0003991305878561678,
+        "embedding": 16,
+        "l1_weight": 133.24426408004217
+      }
+    },
+    {
+      "number": 1,
+      "state": "COMPLETE",
+      "value": 0.2337827910229845,
+      "params": {
+        "batch_size": 16,
+        "lr": 0.0002814509271606064,
+        "base": 8,
+        "dropout": 0.18355586841671384,
+        "discriminator_lr": 0.00013787764619353784,
+        "embedding": 16,
+        "l1_weight": 128.51759613930136
+      }
+    },
+    {
+      "number": 2,
+      "state": "PRUNED",
+      "value": 0.43439448779484013,
+      "params": {
+        "batch_size": 64,
+        "lr": 0.000117115099555241,
+        "base": 8,
+        "dropout": 0.28466566117599995,
+        "discriminator_lr": 0.0009239150319627245,
+        "embedding": 4,
+        "l1_weight": 118.42330265121569
+      }
+    },
+    {
+      "number": 3,
+      "state": "PRUNED",
+      "value": 0.42965800132391585,
+      "params": {
+        "batch_size": 64,
+        "lr": 0.00011240768803005555,
+        "base": 8,
+        "dropout": 0.09351332282682329,
+        "discriminator_lr": 0.000331182988807238,
+        "embedding": 16,
+        "l1_weight": 127.51328233611146
+      }
+    }
+  ]
+}

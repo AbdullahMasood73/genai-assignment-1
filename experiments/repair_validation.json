@@ -1,0 +1,16 @@
+{
+  "status": "completed",
+  "original_universal_validation_objective": 0.321762,
+  "normalization_only_best_objective": 0.3274187759860702,
+  "spatial_pilot_best_objective": 0.2805698961019516,
+  "spatial_pilot_best_epoch": 2,
+  "pilot_epochs_run": 3,
+  "original_test_previously_observed": true,
+  "selection": "validation only",
+  "spatial_onnx_synthetic_parity": {
+    "checks": 6,
+    "max_absolute_error": 2.2083520889282227e-05
+  },
+  "final_evaluation": "artifacts/results/test/summary.json",
+  "full_backup_sha256": "fbe70a473729e25b5f9fae18a90971ad2289d839378ca5e39684ae44f2068bf7"
+}

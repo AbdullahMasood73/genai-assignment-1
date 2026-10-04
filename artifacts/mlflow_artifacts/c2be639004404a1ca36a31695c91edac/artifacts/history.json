@@ -1,0 +1,41 @@
+[
+  {
+    "train_discriminator_real": 0.6909235974440188,
+    "train_discriminator_fake": 0.6758387107339929,
+    "train_generator_adversarial": 0.7231292544270517,
+    "train_generator_reconstruction": 0.289708042370199,
+    "train_loss": 39.325064042784085,
+    "validation_objective": 0.31168073209576636,
+    "validation_l1": 0.23900934182248026,
+    "validation_ssim": 0.3976337487967509,
+    "validation_psnr": 11.983771690032768,
+    "seconds": 23.978318691253662,
+    "epoch": 1
+  },
+  {
+    "train_discriminator_real": 0.6622805525781845,
+    "train_discriminator_fake": 0.6382700063628005,
+    "train_generator_adversarial": 0.7840728956679747,
+    "train_generator_reconstruction": 0.18052609022851782,
+    "train_loss": 24.838138860377903,
+    "validation_objective": 0.24671679454029732,
+    "validation_l1": 0.15722812299833358,
+    "validation_ssim": 0.3953285370982668,
+    "validation_psnr": 14.369510470696216,
+    "seconds": 24.74232244491577,
+    "epoch": 2
+  },
+  {
+    "train_discriminator_real": 0.6401562468626343,
+    "train_discriminator_fake": 0.6214932327275812,
+    "train_generator_adversarial": 0.8130467906014143,
+    "train_generator_reconstruction": 0.13232470732244422,
+    "train_loss": 18.444554873117482,
+    "validation_objective": 0.21152801886669495,
+    "validation_l1": 0.12114690098934953,
+    "validation_ssim": 0.42694753333457613,
+    "validation_psnr": 15.467865416088944,
+    "seconds": 23.986563682556152,
+    "epoch": 3
+  }
+]

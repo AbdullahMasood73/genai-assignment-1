@@ -1,0 +1,11 @@
+{
+  "duration_seconds": 395.357,
+  "actual_browser_frames": 83,
+  "mean_interval_seconds": 4.76333734939759,
+  "longest_interval_seconds": 28.384,
+  "format": "Timestamped low-frame-rate capture of real browser operations; observed gaps preserved",
+  "native_screen_recording": false,
+  "full_decode_passed": true,
+  "narration": "Windows synthesized speech",
+  "publication": "pending"
+}

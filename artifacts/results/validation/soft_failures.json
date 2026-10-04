@@ -1,0 +1,50 @@
+[
+  {
+    "index": 5809,
+    "id": "saint_bernard_115",
+    "system": "soft",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.10541097074747086,
+    "psnr": 12.968153953552246,
+    "ssim": 0.6464005708694458,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 2449,
+    "id": "staffordshire_bull_terrier_125",
+    "system": "soft",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.11152277141809464,
+    "psnr": 12.975341796875,
+    "ssim": 0.4896140992641449,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 3289,
+    "id": "Siamese_199",
+    "system": "soft",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.12401482462882996,
+    "psnr": 13.330657958984375,
+    "ssim": 0.5569779276847839,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 6797,
+    "id": "Abyssinian_182",
+    "system": "soft",
+    "corruption": "occlusion",
+    "severity": "low",
+    "l1": 0.06749235093593597,
+    "psnr": 13.813735961914062,
+    "ssim": 0.8787801861763,
+    "predicted": "occlusion",
+    "routing_correct": true
+  }
+]

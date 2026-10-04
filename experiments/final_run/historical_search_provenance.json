@@ -1,0 +1,6 @@
+{
+  "classifier_search": "Original first-run classifier study retained; classifier retrained in preceding spatial run",
+  "database": "historical_classifier_optuna.db",
+  "source_sha256": "005c5cb7d384389956946a020f56738107d0e1f04627493a26b8275d1134d587",
+  "copied_study_record_matches_original": true
+}

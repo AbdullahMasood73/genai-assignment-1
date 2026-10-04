@@ -1,0 +1,17 @@
+{
+  "base": 8,
+  "latent": 512,
+  "dropout": 0.2598528437324805,
+  "batch_size": 32,
+  "lr": 0.0007661100707771367,
+  "weight_decay": 1e-05,
+  "alpha": 0.939468448256698,
+  "temperature": 1.0,
+  "classification_weight": 0.1,
+  "balance_weight": 0.01,
+  "embedding": 8,
+  "discriminator_lr": 0.0002,
+  "l1_weight": 100.0,
+  "normalized": true,
+  "spatial": true
+}

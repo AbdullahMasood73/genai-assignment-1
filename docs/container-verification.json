@@ -1,0 +1,79 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:8080",
+  "health": {
+    "status": "ready",
+    "models": {
+      "universal": "ready",
+      "classifier": "ready",
+      "salt": "ready",
+      "blur": "ready",
+      "occlusion": "ready",
+      "soft": "ready",
+      "gan": "ready"
+    },
+    "workspaces": {
+      "universal": true,
+      "hard": true,
+      "soft": true,
+      "gan": true
+    },
+    "image_size": 128,
+    "provider": "CPUExecutionProvider"
+  },
+  "operations": [
+    {
+      "operation": "corrupt",
+      "condition": "salt",
+      "reproducible_seed": true
+    },
+    {
+      "operation": "corrupt",
+      "condition": "blur",
+      "reproducible_seed": true
+    },
+    {
+      "operation": "corrupt",
+      "condition": "occlusion",
+      "reproducible_seed": true
+    },
+    {
+      "operation": "universal-restoration",
+      "style": null,
+      "status": 200,
+      "inference_ms": 17.34
+    },
+    {
+      "operation": "hard-routing",
+      "style": null,
+      "status": 200,
+      "inference_ms": 10.79
+    },
+    {
+      "operation": "soft-mixture",
+      "style": null,
+      "status": 200,
+      "inference_ms": 30.77
+    },
+    {
+      "operation": "face-to-sketch",
+      "style": "0",
+      "status": 200,
+      "inference_ms": 15.19
+    },
+    {
+      "operation": "face-to-sketch",
+      "style": "1",
+      "status": 200,
+      "inference_ms": 5.94
+    },
+    {
+      "operation": "face-to-sketch",
+      "style": "2",
+      "status": 200,
+      "inference_ms": 5.16
+    }
+  ],
+  "mlflow_runs_visible": 50,
+  "scope": "Real container HTTP integration and PNG validity; not a quality or throughput benchmark."
+}

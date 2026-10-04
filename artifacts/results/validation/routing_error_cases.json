@@ -1,0 +1,58 @@
+[
+  {
+    "index": 5371,
+    "id": "Egyptian_Mau_142",
+    "system": "predicted_routing",
+    "corruption": "salt",
+    "severity": "low",
+    "l1": 0.28197118639945984,
+    "psnr": 8.64466667175293,
+    "ssim": 0.2728358209133148,
+    "predicted": "occlusion",
+    "routing_correct": false,
+    "oracle_psnr": 29.409772872924805,
+    "predicted_minus_oracle_psnr": -20.765106201171875
+  },
+  {
+    "index": 7311,
+    "id": "Sphynx_119",
+    "system": "predicted_routing",
+    "corruption": "salt",
+    "severity": "low",
+    "l1": 0.14328354597091675,
+    "psnr": 12.703858375549316,
+    "ssim": 0.39970871806144714,
+    "predicted": "occlusion",
+    "routing_correct": false,
+    "oracle_psnr": 28.960243225097656,
+    "predicted_minus_oracle_psnr": -16.25638484954834
+  },
+  {
+    "index": 6301,
+    "id": "Bengal_185",
+    "system": "predicted_routing",
+    "corruption": "salt",
+    "severity": "low",
+    "l1": 0.13277678191661835,
+    "psnr": 14.078868865966797,
+    "ssim": 0.42624086141586304,
+    "predicted": "occlusion",
+    "routing_correct": false,
+    "oracle_psnr": 24.270479202270508,
+    "predicted_minus_oracle_psnr": -10.191610336303711
+  },
+  {
+    "index": 6481,
+    "id": "Ragdoll_115",
+    "system": "predicted_routing",
+    "corruption": "salt",
+    "severity": "low",
+    "l1": 0.1154957041144371,
+    "psnr": 14.104196548461914,
+    "ssim": 0.5693987607955933,
+    "predicted": "occlusion",
+    "routing_correct": false,
+    "oracle_psnr": 28.37384796142578,
+    "predicted_minus_oracle_psnr": -14.269651412963867
+  }
+]

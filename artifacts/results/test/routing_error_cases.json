@@ -1,0 +1,58 @@
+[
+  {
+    "index": 11431,
+    "id": "Egyptian_Mau_60",
+    "system": "predicted_routing",
+    "corruption": "salt",
+    "severity": "low",
+    "l1": 0.3584493398666382,
+    "psnr": 7.097963333129883,
+    "ssim": 0.25501105189323425,
+    "predicted": "occlusion",
+    "routing_correct": false,
+    "oracle_psnr": 19.98615074157715,
+    "predicted_minus_oracle_psnr": -12.888187408447266
+  },
+  {
+    "index": 32991,
+    "id": "Sphynx_23",
+    "system": "predicted_routing",
+    "corruption": "salt",
+    "severity": "low",
+    "l1": 0.28471019864082336,
+    "psnr": 8.279365539550781,
+    "ssim": 0.33970052003860474,
+    "predicted": "occlusion",
+    "routing_correct": false,
+    "oracle_psnr": 28.563291549682617,
+    "predicted_minus_oracle_psnr": -20.283926010131836
+  },
+  {
+    "index": 11781,
+    "id": "Egyptian_Mau_97",
+    "system": "predicted_routing",
+    "corruption": "salt",
+    "severity": "low",
+    "l1": 0.28455856442451477,
+    "psnr": 8.648664474487305,
+    "ssim": 0.3180600702762604,
+    "predicted": "occlusion",
+    "routing_correct": false,
+    "oracle_psnr": 25.07484245300293,
+    "predicted_minus_oracle_psnr": -16.426177978515625
+  },
+  {
+    "index": 11461,
+    "id": "Egyptian_Mau_63",
+    "system": "predicted_routing",
+    "corruption": "salt",
+    "severity": "low",
+    "l1": 0.26688477396965027,
+    "psnr": 8.813468933105469,
+    "ssim": 0.3762286901473999,
+    "predicted": "occlusion",
+    "routing_correct": false,
+    "oracle_psnr": 25.31963348388672,
+    "predicted_minus_oracle_psnr": -16.50616455078125
+  }
+]

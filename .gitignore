@@ -1,0 +1,37 @@
+# Environments and caches
+.venv/
+__pycache__/
+.pytest_cache/
+node_modules/
+frontend/dist/
+.env
+
+# Datasets are downloaded by `python -m restoration.prepare`
+data/
+
+# Large training state. The ONNX models (artifacts/models), evaluation results,
+# Optuna/MLflow records and report ARE tracked so a plain clone can run the app.
+artifacts/checkpoints/
+artifacts/trials/
+artifacts_*/
+*.pt
+*.zip
+
+# Local build and delivery output
+delivery/
+delivery_*/
+tools/
+tmp/
+report/*.aux
+report/*.log
+report/*.out
+docs/screenshots-baseline/
+
+# Local-only helpers (synthetic demo narration, keep-awake)
+scripts/build_demo.py
+scripts/encode_live_demo.py
+scripts/prepare_live_narration.py
+scripts/narrate_demo.ps1
+scripts/keep_training_awake.ps1
+scripts/package_delivery.py
+scripts/verify_delivery.py

@@ -1,0 +1,50 @@
+[
+  {
+    "index": 11439,
+    "id": "Egyptian_Mau_60",
+    "system": "universal",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.31247755885124207,
+    "psnr": 8.722456932067871,
+    "ssim": 0.17947183549404144,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 26569,
+    "id": "Ragdoll_78",
+    "system": "universal",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.23081375658512115,
+    "psnr": 8.798911094665527,
+    "ssim": 0.4455123245716095,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 10678,
+    "id": "chihuahua_84",
+    "system": "universal",
+    "corruption": "occlusion",
+    "severity": "medium",
+    "l1": 0.1887139230966568,
+    "psnr": 10.015090942382812,
+    "ssim": 0.43935564160346985,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 31749,
+    "id": "shiba_inu_95",
+    "system": "universal",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.17361152172088623,
+    "psnr": 10.83128833770752,
+    "ssim": 0.457208514213562,
+    "predicted": "occlusion",
+    "routing_correct": true
+  }
+]

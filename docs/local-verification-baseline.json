@@ -1,0 +1,86 @@
+{
+  "models": {
+    "universal": {
+      "checksum": "passed",
+      "finite_outputs": true,
+      "black_white_max_output_difference": 7.450580596923828e-07,
+      "input_insensitive_warning": true
+    },
+    "classifier": {
+      "checksum": "passed",
+      "finite_outputs": true,
+      "black_white_max_output_difference": 44.719154357910156,
+      "input_insensitive_warning": false
+    },
+    "salt": {
+      "checksum": "passed",
+      "finite_outputs": true,
+      "black_white_max_output_difference": 2.950429916381836e-05,
+      "input_insensitive_warning": false
+    },
+    "blur": {
+      "checksum": "passed",
+      "finite_outputs": true,
+      "black_white_max_output_difference": 2.54213809967041e-05,
+      "input_insensitive_warning": false
+    },
+    "occlusion": {
+      "checksum": "passed",
+      "finite_outputs": true,
+      "black_white_max_output_difference": 3.319978713989258e-05,
+      "input_insensitive_warning": false
+    },
+    "soft": {
+      "checksum": "passed",
+      "finite_outputs": true,
+      "black_white_max_output_difference": 0.4179007411003113,
+      "input_insensitive_warning": false
+    },
+    "gan": {
+      "checksum": "passed",
+      "finite_outputs": true,
+      "black_white_max_output_difference": 0.4103167653083801,
+      "input_insensitive_warning": false
+    }
+  },
+  "api": [
+    {
+      "endpoint": "universal-restoration",
+      "style": null,
+      "status": 200,
+      "inference_ms": 6.49
+    },
+    {
+      "endpoint": "hard-routing",
+      "style": null,
+      "status": 200,
+      "inference_ms": 6.59
+    },
+    {
+      "endpoint": "soft-mixture",
+      "style": null,
+      "status": 200,
+      "inference_ms": 17.56
+    },
+    {
+      "endpoint": "face-to-sketch",
+      "style": "0",
+      "status": 200,
+      "inference_ms": 4.86
+    },
+    {
+      "endpoint": "face-to-sketch",
+      "style": "1",
+      "status": 200,
+      "inference_ms": 4.13
+    },
+    {
+      "endpoint": "face-to-sketch",
+      "style": "2",
+      "status": 200,
+      "inference_ms": 5.85
+    }
+  ],
+  "provider": "CPUExecutionProvider",
+  "scope": "Imported trained models; checksum, finite output, API, probability sums, input sensitivity."
+}

@@ -1,0 +1,146 @@
+{
+  "split": "validation",
+  "condition_filter": "salt",
+  "selected_epoch": 20,
+  "best_objective": 0.06756191176996715,
+  "columns": [
+    "target",
+    "input",
+    "output",
+    "absolute error"
+  ],
+  "examples": [
+    {
+      "id": "pug_135",
+      "corruption": {
+        "kind": "salt",
+        "seed": 10000,
+        "level": "high",
+        "probability": 0.15
+      },
+      "output_l1": 0.04592118784785271,
+      "input_l1": 0.07354050129652023
+    },
+    {
+      "id": "saint_bernard_138",
+      "corruption": {
+        "kind": "salt",
+        "seed": 2000,
+        "level": "low",
+        "probability": 0.03
+      },
+      "output_l1": 0.037868477404117584,
+      "input_l1": 0.01501097809523344
+    },
+    {
+      "id": "shiba_inu_105",
+      "corruption": {
+        "kind": "salt",
+        "seed": 17624,
+        "level": "low",
+        "probability": 0.03
+      },
+      "output_l1": 0.04457949474453926,
+      "input_l1": 0.016257531940937042
+    },
+    {
+      "id": "Sphynx_102",
+      "corruption": {
+        "kind": "salt",
+        "seed": 12044,
+        "level": "low",
+        "probability": 0.03
+      },
+      "output_l1": 0.030578112229704857,
+      "input_l1": 0.015241238288581371
+    },
+    {
+      "id": "newfoundland_175",
+      "corruption": {
+        "kind": "salt",
+        "seed": 14898,
+        "level": "high",
+        "probability": 0.15
+      },
+      "output_l1": 0.028736649081110954,
+      "input_l1": 0.07234189659357071
+    },
+    {
+      "id": "Bengal_185",
+      "corruption": {
+        "kind": "salt",
+        "seed": 19577,
+        "level": "low",
+        "probability": 0.03
+      },
+      "output_l1": 0.034835007041692734,
+      "input_l1": 0.015098023228347301
+    },
+    {
+      "id": "staffordshire_bull_terrier_171",
+      "corruption": {
+        "kind": "salt",
+        "seed": 2063,
+        "level": "medium",
+        "probability": 0.08
+      },
+      "output_l1": 0.042186345905065536,
+      "input_l1": 0.040357399731874466
+    },
+    {
+      "id": "basset_hound_190",
+      "corruption": {
+        "kind": "salt",
+        "seed": 9876,
+        "level": "high",
+        "probability": 0.15
+      },
+      "output_l1": 0.039067067205905914,
+      "input_l1": 0.07219868898391724
+    },
+    {
+      "id": "american_bulldog_126",
+      "corruption": {
+        "kind": "salt",
+        "seed": 2186,
+        "level": "low",
+        "probability": 0.03
+      },
+      "output_l1": 0.030943652614951134,
+      "input_l1": 0.016074903309345245
+    },
+    {
+      "id": "japanese_chin_118",
+      "corruption": {
+        "kind": "salt",
+        "seed": 15919,
+        "level": "low",
+        "probability": 0.03
+      },
+      "output_l1": 0.038152772933244705,
+      "input_l1": 0.015087890438735485
+    },
+    {
+      "id": "Abyssinian_131",
+      "corruption": {
+        "kind": "salt",
+        "seed": 22305,
+        "level": "low",
+        "probability": 0.03
+      },
+      "output_l1": 0.025523671880364418,
+      "input_l1": 0.015306182205677032
+    },
+    {
+      "id": "american_bulldog_180",
+      "corruption": {
+        "kind": "salt",
+        "seed": 4635,
+        "level": "low",
+        "probability": 0.03
+      },
+      "output_l1": 0.024474041536450386,
+      "input_l1": 0.015104405581951141
+    }
+  ]
+}

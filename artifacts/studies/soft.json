@@ -1,0 +1,61 @@
+{
+  "task": "soft",
+  "best_trial": 1,
+  "best_value": 0.06718063950538636,
+  "completed": 2,
+  "pruned": 1,
+  "budget": {
+    "epochs": 3,
+    "train_batches": 40,
+    "validation_batches": 40
+  },
+  "search_space": {
+    "batch_size": "CategoricalDistribution(choices=(16, 32, 64))",
+    "lr": "FloatDistribution(high=0.0003, log=True, low=1e-05, step=None)",
+    "temperature": "FloatDistribution(high=2.0, log=False, low=0.5, step=None)",
+    "classification_weight": "FloatDistribution(high=0.3, log=True, low=0.02, step=None)",
+    "balance_weight": "FloatDistribution(high=0.1, log=True, low=0.001, step=None)",
+    "alpha": "FloatDistribution(high=0.95, log=False, low=0.6, step=None)"
+  },
+  "trials": [
+    {
+      "number": 0,
+      "state": "COMPLETE",
+      "value": 0.0693846395239234,
+      "params": {
+        "batch_size": 32,
+        "lr": 7.661100707771373e-05,
+        "temperature": 0.7340279606636548,
+        "classification_weight": 0.03051362379613698,
+        "balance_weight": 0.0013066739238053278,
+        "alpha": 0.9031616510212273
+      }
+    },
+    {
+      "number": 1,
+      "state": "COMPLETE",
+      "value": 0.06718063950538636,
+      "params": {
+        "batch_size": 32,
+        "lr": 0.00027081608642499667,
+        "temperature": 1.7486639612006325,
+        "classification_weight": 0.035543498097189236,
+        "balance_weight": 0.0023102018878452934,
+        "alpha": 0.6641915784487018
+      }
+    },
+    {
+      "number": 2,
+      "state": "PRUNED",
+      "value": 0.06860522162169218,
+      "params": {
+        "batch_size": 32,
+        "lr": 2.69265525148647e-05,
+        "temperature": 1.4177793420835691,
+        "classification_weight": 0.029180149047462245,
+        "balance_weight": 0.00383962929980417,
+        "alpha": 0.7282266451527921
+      }
+    }
+  ]
+}

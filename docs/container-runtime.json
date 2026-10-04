@@ -1,0 +1,17 @@
+{
+  "status": "verified",
+  "engine": "Docker 27.5.1",
+  "compose": "2.32.4",
+  "environment": "existing Ubuntu 22.04 WSL, isolated temporary engine",
+  "source_copy": "/tmp/restoration-lab-build",
+  "socket": "/tmp/restoration-lab-docker.sock",
+  "frontend": "http://127.0.0.1:8080",
+  "backend_health": "healthy",
+  "backend_image": "sha256:b8e9a7b2859f52532d57fd33838eaf2fde0d147a6b9a465965bc15227d0a30f1",
+  "frontend_image": "sha256:e919a7f2d096339e22cb5d6f4809a17aac8930927b905524408cc5038b012f1e",
+  "workarounds": [
+    "process-local legacy iptables links for WSL kernel",
+    "source extracted to Linux temporary directory to avoid NTFS xattr error"
+  ],
+  "http_evidence": "docs/container-verification.json"
+}

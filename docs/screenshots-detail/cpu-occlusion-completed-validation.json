@@ -1,0 +1,284 @@
+{
+  "split": "validation",
+  "condition_filter": "occlusion",
+  "selected_epoch": 18,
+  "best_objective": 0.09864341176074484,
+  "columns": [
+    "target",
+    "input",
+    "output",
+    "absolute error"
+  ],
+  "examples": [
+    {
+      "id": "pug_135",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 10010,
+        "level": "high",
+        "rectangles": [
+          [
+            5,
+            3,
+            87,
+            22
+          ],
+          [
+            49,
+            45,
+            49,
+            39
+          ],
+          [
+            75,
+            87,
+            53,
+            36
+          ]
+        ],
+        "requested_area": 0.35
+      },
+      "output_l1": 0.09863171726465225,
+      "input_l1": 0.21097548305988312
+    },
+    {
+      "id": "saint_bernard_138",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 2010,
+        "level": "low",
+        "rectangles": [
+          [
+            11,
+            82,
+            82,
+            20
+          ]
+        ],
+        "requested_area": 0.1
+      },
+      "output_l1": 0.049728453159332275,
+      "input_l1": 0.048941418528556824
+    },
+    {
+      "id": "shiba_inu_105",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 17634,
+        "level": "low",
+        "rectangles": [
+          [
+            67,
+            69,
+            42,
+            39
+          ]
+        ],
+        "requested_area": 0.1
+      },
+      "output_l1": 0.053646519780159,
+      "input_l1": 0.039655301719903946
+    },
+    {
+      "id": "Sphynx_102",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 12054,
+        "level": "low",
+        "rectangles": [
+          [
+            17,
+            69,
+            63,
+            26
+          ]
+        ],
+        "requested_area": 0.1
+      },
+      "output_l1": 0.038446735590696335,
+      "input_l1": 0.03846762701869011
+    },
+    {
+      "id": "newfoundland_175",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 14908,
+        "level": "high",
+        "rectangles": [
+          [
+            27,
+            2,
+            58,
+            33
+          ],
+          [
+            0,
+            46,
+            49,
+            39
+          ],
+          [
+            3,
+            89,
+            87,
+            22
+          ]
+        ],
+        "requested_area": 0.35
+      },
+      "output_l1": 0.05689306929707527,
+      "input_l1": 0.2055782824754715
+    },
+    {
+      "id": "Bengal_185",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 19587,
+        "level": "low",
+        "rectangles": [
+          [
+            0,
+            66,
+            126,
+            13
+          ]
+        ],
+        "requested_area": 0.1
+      },
+      "output_l1": 0.046713829040527344,
+      "input_l1": 0.021298957988619804
+    },
+    {
+      "id": "staffordshire_bull_terrier_171",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 2073,
+        "level": "medium",
+        "rectangles": [
+          [
+            86,
+            13,
+            41,
+            40
+          ],
+          [
+            2,
+            85,
+            117,
+            14
+          ]
+        ],
+        "requested_area": 0.2
+      },
+      "output_l1": 0.06268224865198135,
+      "input_l1": 0.07797085493803024
+    },
+    {
+      "id": "basset_hound_190",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 9886,
+        "level": "high",
+        "rectangles": [
+          [
+            7,
+            16,
+            106,
+            18
+          ],
+          [
+            35,
+            52,
+            87,
+            22
+          ],
+          [
+            17,
+            102,
+            106,
+            18
+          ]
+        ],
+        "requested_area": 0.35
+      },
+      "output_l1": 0.06863423436880112,
+      "input_l1": 0.1190309226512909
+    },
+    {
+      "id": "american_bulldog_126",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 2196,
+        "level": "low",
+        "rectangles": [
+          [
+            104,
+            15,
+            15,
+            109
+          ]
+        ],
+        "requested_area": 0.1
+      },
+      "output_l1": 0.040271252393722534,
+      "input_l1": 0.018316371366381645
+    },
+    {
+      "id": "japanese_chin_118",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 15929,
+        "level": "low",
+        "rectangles": [
+          [
+            15,
+            96,
+            109,
+            15
+          ]
+        ],
+        "requested_area": 0.1
+      },
+      "output_l1": 0.04229431226849556,
+      "input_l1": 0.043048057705163956
+    },
+    {
+      "id": "Abyssinian_131",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 22315,
+        "level": "low",
+        "rectangles": [
+          [
+            7,
+            1,
+            13,
+            126
+          ]
+        ],
+        "requested_area": 0.1
+      },
+      "output_l1": 0.0310199037194252,
+      "input_l1": 0.03680212423205376
+    },
+    {
+      "id": "american_bulldog_180",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 4645,
+        "level": "low",
+        "rectangles": [
+          [
+            40,
+            8,
+            15,
+            109
+          ]
+        ],
+        "requested_area": 0.1
+      },
+      "output_l1": 0.0404798798263073,
+      "input_l1": 0.0359974205493927
+    }
+  ]
+}

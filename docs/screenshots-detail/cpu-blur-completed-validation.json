@@ -1,0 +1,158 @@
+{
+  "split": "validation",
+  "condition_filter": "blur",
+  "selected_epoch": 18,
+  "best_objective": 0.06829934443036716,
+  "columns": [
+    "target",
+    "input",
+    "output",
+    "absolute error"
+  ],
+  "examples": [
+    {
+      "id": "pug_135",
+      "corruption": {
+        "kind": "blur",
+        "seed": 10005,
+        "level": "high",
+        "kernel": 7,
+        "sigma": 2.5
+      },
+      "output_l1": 0.049877721816301346,
+      "input_l1": 0.047880034893751144
+    },
+    {
+      "id": "saint_bernard_138",
+      "corruption": {
+        "kind": "blur",
+        "seed": 2005,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.037519559264183044,
+      "input_l1": 0.016801344230771065
+    },
+    {
+      "id": "shiba_inu_105",
+      "corruption": {
+        "kind": "blur",
+        "seed": 17629,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.044290367513895035,
+      "input_l1": 0.02179916389286518
+    },
+    {
+      "id": "Sphynx_102",
+      "corruption": {
+        "kind": "blur",
+        "seed": 12049,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.030486857518553734,
+      "input_l1": 0.012662373483181
+    },
+    {
+      "id": "newfoundland_175",
+      "corruption": {
+        "kind": "blur",
+        "seed": 14903,
+        "level": "high",
+        "kernel": 7,
+        "sigma": 2.5
+      },
+      "output_l1": 0.030049705877900124,
+      "input_l1": 0.030502403154969215
+    },
+    {
+      "id": "Bengal_185",
+      "corruption": {
+        "kind": "blur",
+        "seed": 19582,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.03577787056565285,
+      "input_l1": 0.01825724169611931
+    },
+    {
+      "id": "staffordshire_bull_terrier_171",
+      "corruption": {
+        "kind": "blur",
+        "seed": 2068,
+        "level": "medium",
+        "kernel": 5,
+        "sigma": 1.5
+      },
+      "output_l1": 0.040480393916368484,
+      "input_l1": 0.03867856785655022
+    },
+    {
+      "id": "basset_hound_190",
+      "corruption": {
+        "kind": "blur",
+        "seed": 9881,
+        "level": "high",
+        "kernel": 7,
+        "sigma": 2.5
+      },
+      "output_l1": 0.04385869577527046,
+      "input_l1": 0.046077366918325424
+    },
+    {
+      "id": "american_bulldog_126",
+      "corruption": {
+        "kind": "blur",
+        "seed": 2191,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.031386665999889374,
+      "input_l1": 0.012432250194251537
+    },
+    {
+      "id": "japanese_chin_118",
+      "corruption": {
+        "kind": "blur",
+        "seed": 15924,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.038707658648490906,
+      "input_l1": 0.020529871806502342
+    },
+    {
+      "id": "Abyssinian_131",
+      "corruption": {
+        "kind": "blur",
+        "seed": 22310,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.025037338957190514,
+      "input_l1": 0.010427507571876049
+    },
+    {
+      "id": "american_bulldog_180",
+      "corruption": {
+        "kind": "blur",
+        "seed": 4640,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.024797556921839714,
+      "input_l1": 0.010435589589178562
+    }
+  ]
+}

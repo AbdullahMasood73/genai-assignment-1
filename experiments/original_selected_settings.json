@@ -1,0 +1,184 @@
+{
+  "classifier": {
+    "config": {
+      "base": 24,
+      "latent": 128,
+      "dropout": 0.2896896099223678,
+      "batch_size": 32,
+      "lr": 0.0007896186801026692,
+      "weight_decay": 0.0002661901888489054,
+      "alpha": 0.8,
+      "temperature": 1,
+      "classification_weight": 0.1,
+      "balance_weight": 0.01,
+      "embedding": 8,
+      "discriminator_lr": 0.0002,
+      "l1_weight": 100
+    },
+    "study": {
+      "task": "classifier",
+      "best_trial": 3,
+      "best_value": 0.3270948201417923,
+      "completed": 3,
+      "pruned": 1,
+      "budget": {
+        "epochs": 3,
+        "train_batches": 40,
+        "validation_batches": 20
+      },
+      "search_space": {
+        "batch_size": "CategoricalDistribution(choices=(16, 32, 64))",
+        "lr": "FloatDistribution(high=0.003, log=True, low=0.0001, step=None)",
+        "base": "CategoricalDistribution(choices=(8, 16, 24))",
+        "dropout": "FloatDistribution(high=0.3, log=False, low=0.0, step=None)",
+        "weight_decay": "FloatDistribution(high=0.001, log=True, low=1e-06, step=None)"
+      },
+      "trials": [
+        {
+          "number": 0,
+          "state": "COMPLETE",
+          "value": 0.7058386385440827,
+          "params": {
+            "batch_size": 32,
+            "lr": 0.0007661100707771367,
+            "base": 8,
+            "dropout": 0.2598528437324805,
+            "weight_decay": 0.00006358358856676247
+          }
+        },
+        {
+          "number": 1,
+          "state": "COMPLETE",
+          "value": 0.4095952495932579,
+          "params": {
+            "batch_size": 64,
+            "lr": 0.0016967533607196547,
+            "base": 8,
+            "dropout": 0.09127267288786131,
+            "weight_decay": 0.00003752055855124284
+          }
+        },
+        {
+          "number": 2,
+          "state": "PRUNED",
+          "value": 0.6097606748342514,
+          "params": {
+            "batch_size": 64,
+            "lr": 0.000160712385120399,
+            "base": 24,
+            "dropout": 0.23555278841790406,
+            "weight_decay": 0.000003972110727381911
+          }
+        },
+        {
+          "number": 3,
+          "state": "COMPLETE",
+          "value": 0.3270948201417923,
+          "params": {
+            "batch_size": 32,
+            "lr": 0.0007896186801026692,
+            "base": 24,
+            "dropout": 0.2896896099223678,
+            "weight_decay": 0.0002661901888489054
+          }
+        }
+      ]
+    }
+  },
+  "gan": {
+    "config": {
+      "base": 8,
+      "latent": 128,
+      "dropout": 0.2598528437324805,
+      "batch_size": 32,
+      "lr": 0.0007661100707771367,
+      "weight_decay": 0.00001,
+      "alpha": 0.8,
+      "temperature": 1,
+      "classification_weight": 0.1,
+      "balance_weight": 0.01,
+      "embedding": 16,
+      "discriminator_lr": 0.0003991305878561678,
+      "l1_weight": 133.24426408004217
+    },
+    "study": {
+      "task": "gan",
+      "best_trial": 0,
+      "best_value": 0.2260502171966265,
+      "completed": 2,
+      "pruned": 2,
+      "budget": {
+        "epochs": 3,
+        "train_batches": 40,
+        "validation_batches": 20
+      },
+      "search_space": {
+        "batch_size": "CategoricalDistribution(choices=(16, 32, 64))",
+        "lr": "FloatDistribution(high=0.003, log=True, low=0.0001, step=None)",
+        "base": "CategoricalDistribution(choices=(8, 16, 24))",
+        "dropout": "FloatDistribution(high=0.3, log=False, low=0.0, step=None)",
+        "discriminator_lr": "FloatDistribution(high=0.001, log=True, low=0.0001, step=None)",
+        "embedding": "CategoricalDistribution(choices=(4, 8, 16))",
+        "l1_weight": "FloatDistribution(high=150.0, log=False, low=50.0, step=None)"
+      },
+      "trials": [
+        {
+          "number": 0,
+          "state": "COMPLETE",
+          "value": 0.2260502171966265,
+          "params": {
+            "batch_size": 32,
+            "lr": 0.0007661100707771367,
+            "base": 8,
+            "dropout": 0.2598528437324805,
+            "discriminator_lr": 0.0003991305878561678,
+            "embedding": 16,
+            "l1_weight": 133.24426408004217
+          }
+        },
+        {
+          "number": 1,
+          "state": "COMPLETE",
+          "value": 0.2337827910229845,
+          "params": {
+            "batch_size": 16,
+            "lr": 0.0002814509271606064,
+            "base": 8,
+            "dropout": 0.18355586841671384,
+            "discriminator_lr": 0.00013787764619353784,
+            "embedding": 16,
+            "l1_weight": 128.51759613930136
+          }
+        },
+        {
+          "number": 2,
+          "state": "PRUNED",
+          "value": 0.43439448779484013,
+          "params": {
+            "batch_size": 64,
+            "lr": 0.000117115099555241,
+            "base": 8,
+            "dropout": 0.28466566117599995,
+            "discriminator_lr": 0.0009239150319627245,
+            "embedding": 4,
+            "l1_weight": 118.42330265121569
+          }
+        },
+        {
+          "number": 3,
+          "state": "PRUNED",
+          "value": 0.42965800132391585,
+          "params": {
+            "batch_size": 64,
+            "lr": 0.00011240768803005555,
+            "base": 8,
+            "dropout": 0.09351332282682329,
+            "discriminator_lr": 0.000331182988807238,
+            "embedding": 16,
+            "l1_weight": 127.51328233611146
+          }
+        }
+      ]
+    }
+  }
+}

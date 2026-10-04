@@ -1,0 +1,762 @@
+{
+  "status": "evaluated",
+  "split": "test",
+  "subset": false,
+  "execution_memory_format": "channels_last",
+  "pet_input_count": 36690,
+  "face_pair_count": 1046,
+  "checkpoints": {
+    "universal": {
+      "checkpoint_sha256": "b2c214657238c8f0f3d7e26b5463eeaae50f321a6396eefc99c83a7e81d09932",
+      "config": {
+        "base": 24,
+        "latent": 8192,
+        "dropout": 0.0,
+        "batch_size": 32,
+        "lr": 0.0003,
+        "weight_decay": 1e-05,
+        "alpha": 0.8,
+        "temperature": 1.0,
+        "classification_weight": 0.1,
+        "balance_weight": 0.01,
+        "embedding": 8,
+        "discriminator_lr": 0.0002,
+        "l1_weight": 100.0,
+        "detail": true,
+        "detail_bn": true,
+        "detail_shuffle": true
+      },
+      "epoch": 22
+    },
+    "classifier": {
+      "checkpoint_sha256": "b41060c54da05044b2d8e50b34bc76f88353f59d09012e86b08c05f531c7ddf4",
+      "config": {
+        "base": 24,
+        "latent": 128,
+        "dropout": 0.2896896099223678,
+        "batch_size": 32,
+        "lr": 0.0007896186801026692,
+        "weight_decay": 0.0002661901888489054,
+        "alpha": 0.8,
+        "temperature": 1,
+        "classification_weight": 0.1,
+        "balance_weight": 0.01,
+        "embedding": 8,
+        "discriminator_lr": 0.0002,
+        "l1_weight": 100
+      },
+      "epoch": 10
+    },
+    "salt": {
+      "checkpoint_sha256": "cd2078708515d572fc454f4ccf98321ebe8ce134f98ff9a640b443dffc55591c",
+      "config": {
+        "base": 24,
+        "latent": 8192,
+        "dropout": 0.0,
+        "batch_size": 32,
+        "lr": 0.0003,
+        "weight_decay": 1e-05,
+        "alpha": 0.8,
+        "temperature": 1.0,
+        "classification_weight": 0.1,
+        "balance_weight": 0.01,
+        "embedding": 8,
+        "discriminator_lr": 0.0002,
+        "l1_weight": 100.0,
+        "detail": true,
+        "detail_bn": true,
+        "detail_shuffle": true
+      },
+      "epoch": 20
+    },
+    "blur": {
+      "checkpoint_sha256": "efa1eadafcc2983ad6d1085f089c1d27d1663dcc53fbfc3361d8f6ece279fbe6",
+      "config": {
+        "base": 24,
+        "latent": 8192,
+        "dropout": 0.0,
+        "batch_size": 32,
+        "lr": 0.0003,
+        "weight_decay": 1e-05,
+        "alpha": 0.8,
+        "temperature": 1.0,
+        "classification_weight": 0.1,
+        "balance_weight": 0.01,
+        "embedding": 8,
+        "discriminator_lr": 0.0002,
+        "l1_weight": 100.0,
+        "detail": true,
+        "detail_bn": true,
+        "detail_shuffle": true
+      },
+      "epoch": 18
+    },
+    "occlusion": {
+      "checkpoint_sha256": "ccdcfbc8423a88ad6e245aac196d5722008cdd0df7357cd80fc67dd41dad3342",
+      "config": {
+        "base": 24,
+        "latent": 8192,
+        "dropout": 0.0,
+        "batch_size": 32,
+        "lr": 0.0003,
+        "weight_decay": 1e-05,
+        "alpha": 0.8,
+        "temperature": 1.0,
+        "classification_weight": 0.1,
+        "balance_weight": 0.01,
+        "embedding": 8,
+        "discriminator_lr": 0.0002,
+        "l1_weight": 100.0,
+        "detail": true,
+        "detail_bn": true,
+        "detail_shuffle": true
+      },
+      "epoch": 18
+    },
+    "soft": {
+      "checkpoint_sha256": "a72ad8b112e6cfdae693c5522be27b2831af69eaaa1ad97ac30207acc73c6b28",
+      "config": {
+        "base": 16,
+        "latent": 128,
+        "dropout": 0.1,
+        "batch_size": 32,
+        "lr": 0.00027081608642499667,
+        "weight_decay": 1e-05,
+        "alpha": 0.6641915784487018,
+        "temperature": 1.7486639612006325,
+        "classification_weight": 0.035543498097189236,
+        "balance_weight": 0.0023102018878452934,
+        "embedding": 8,
+        "discriminator_lr": 0.0002,
+        "l1_weight": 100.0
+      },
+      "epoch": 11
+    },
+    "gan": {
+      "checkpoint_sha256": "bbf60089f542731cec740b29f57d23ddb6d7101ea670396ab33109920992efaf",
+      "config": {
+        "base": 24,
+        "latent": 128,
+        "dropout": 0.05,
+        "batch_size": 32,
+        "lr": 0.0002,
+        "weight_decay": 1e-05,
+        "alpha": 0.8,
+        "temperature": 1.0,
+        "classification_weight": 0.1,
+        "balance_weight": 0.01,
+        "embedding": 16,
+        "discriminator_lr": 0.0002,
+        "l1_weight": 100.0,
+        "gan_refined": true
+      },
+      "epoch": 12
+    }
+  },
+  "restoration": [
+    {
+      "system": "corrupted_baseline",
+      "corruption": "clean",
+      "severity": "clean",
+      "n": 3669,
+      "l1": 0.0,
+      "psnr": 100.0,
+      "ssim": 1.0
+    },
+    {
+      "system": "corrupted_baseline",
+      "corruption": "salt",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.015005012826664582,
+      "psnr": 20.13585056378751,
+      "ssim": 0.6025452483541863
+    },
+    {
+      "system": "corrupted_baseline",
+      "corruption": "salt",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.04002855629496465,
+      "psnr": 15.87008746426058,
+      "ssim": 0.3393427283384066
+    },
+    {
+      "system": "corrupted_baseline",
+      "corruption": "salt",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.0750313600208981,
+      "psnr": 13.140381462666928,
+      "ssim": 0.20406948498473826
+    },
+    {
+      "system": "corrupted_baseline",
+      "corruption": "blur",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.015773517964585485,
+      "psnr": 32.335945602462736,
+      "ssim": 0.9435816739423621
+    },
+    {
+      "system": "corrupted_baseline",
+      "corruption": "blur",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.030130967585271964,
+      "psnr": 26.773521522112325,
+      "ssim": 0.8057012473344478
+    },
+    {
+      "system": "corrupted_baseline",
+      "corruption": "blur",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.04041017539688541,
+      "psnr": 24.35321417190165,
+      "ssim": 0.6916232766849074
+    },
+    {
+      "system": "corrupted_baseline",
+      "corruption": "occlusion",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.0443572722424637,
+      "psnr": 16.608113697225633,
+      "ssim": 0.8573133191187722
+    },
+    {
+      "system": "corrupted_baseline",
+      "corruption": "occlusion",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.08927683350974051,
+      "psnr": 13.225440714527586,
+      "ssim": 0.7214929416479223
+    },
+    {
+      "system": "corrupted_baseline",
+      "corruption": "occlusion",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.15604075406616846,
+      "psnr": 10.681203329975776,
+      "ssim": 0.5284381478448172
+    },
+    {
+      "system": "universal",
+      "corruption": "clean",
+      "severity": "clean",
+      "n": 3669,
+      "l1": 0.03375924893615031,
+      "psnr": 26.613564925870897,
+      "ssim": 0.8216333878189772
+    },
+    {
+      "system": "universal",
+      "corruption": "salt",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.03713675530342567,
+      "psnr": 25.75547063093999,
+      "ssim": 0.7695374216556419
+    },
+    {
+      "system": "universal",
+      "corruption": "salt",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.04162968140583852,
+      "psnr": 24.746663457725443,
+      "ssim": 0.7205723738127751
+    },
+    {
+      "system": "universal",
+      "corruption": "salt",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.04783912913751443,
+      "psnr": 23.578016687654674,
+      "ssim": 0.6656238248251413
+    },
+    {
+      "system": "universal",
+      "corruption": "blur",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.03332908412288802,
+      "psnr": 26.685518750835094,
+      "ssim": 0.8211680360404436
+    },
+    {
+      "system": "universal",
+      "corruption": "blur",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.03593988472387158,
+      "psnr": 25.884446094457836,
+      "ssim": 0.782683186925507
+    },
+    {
+      "system": "universal",
+      "corruption": "blur",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.043582845906455156,
+      "psnr": 24.111099954066013,
+      "ssim": 0.6881326129632088
+    },
+    {
+      "system": "universal",
+      "corruption": "occlusion",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.04270575513708377,
+      "psnr": 23.61805545695636,
+      "ssim": 0.7602020413065256
+    },
+    {
+      "system": "universal",
+      "corruption": "occlusion",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.05128562436244913,
+      "psnr": 21.847269764970648,
+      "ssim": 0.7042383490920749
+    },
+    {
+      "system": "universal",
+      "corruption": "occlusion",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.06585532137055461,
+      "psnr": 19.799770571484363,
+      "ssim": 0.6173064117861821
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "clean",
+      "severity": "clean",
+      "n": 3669,
+      "l1": 0.0,
+      "psnr": 100.0,
+      "ssim": 1.0
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "salt",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.03425558869955154,
+      "psnr": 26.39553348554776,
+      "ssim": 0.8162680639659199
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "salt",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.035392774372042024,
+      "psnr": 26.095766446479306,
+      "ssim": 0.801179968350653
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "salt",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.03807079750596746,
+      "psnr": 25.464095320744487,
+      "ssim": 0.7719572832390085
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "blur",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.03375043203121645,
+      "psnr": 26.64508039173491,
+      "ssim": 0.8298895160682067
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "blur",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.033439575880055174,
+      "psnr": 26.62755581805608,
+      "ssim": 0.8198238572313403
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "blur",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.04050510892511007,
+      "psnr": 24.775196572421,
+      "ssim": 0.7233788618423465
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "occlusion",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.04380532808202827,
+      "psnr": 23.557016894095405,
+      "ssim": 0.7654210308424034
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "occlusion",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.05086274514100181,
+      "psnr": 21.9198849845173,
+      "ssim": 0.7182381845570026
+    },
+    {
+      "system": "oracle_routing",
+      "corruption": "occlusion",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.0638169185607472,
+      "psnr": 19.808172175266268,
+      "ssim": 0.6402297705192597
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "clean",
+      "severity": "clean",
+      "n": 3669,
+      "l1": 0.005518708669987418,
+      "psnr": 87.60219541353698,
+      "ssim": 0.9713561526352718
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "salt",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.03551323325559801,
+      "psnr": 26.272811649735274,
+      "ssim": 0.8129326807734556
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "salt",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.035392774372042024,
+      "psnr": 26.095766446479306,
+      "ssim": 0.801179968350653
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "salt",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.03807079750596746,
+      "psnr": 25.464095320744487,
+      "ssim": 0.7719572832390085
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "blur",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.031763548520844224,
+      "psnr": 27.084915125262807,
+      "ssim": 0.8415122702778701
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "blur",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.033538579668684204,
+      "psnr": 26.608391881086547,
+      "ssim": 0.8188498809377255
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "blur",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.04058081514318061,
+      "psnr": 24.76408601658453,
+      "ssim": 0.7226576062940258
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "occlusion",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.043810012095685746,
+      "psnr": 23.51017000266465,
+      "ssim": 0.7662035215043931
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "occlusion",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.05086274514100181,
+      "psnr": 21.9198849845173,
+      "ssim": 0.7182381845570026
+    },
+    {
+      "system": "predicted_routing",
+      "corruption": "occlusion",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.0638169185607472,
+      "psnr": 19.808172175266268,
+      "ssim": 0.6402297705192597
+    },
+    {
+      "system": "soft",
+      "corruption": "clean",
+      "severity": "clean",
+      "n": 3669,
+      "l1": 0.003300982348631489,
+      "psnr": 50.65381456558631,
+      "ssim": 0.9947673950184915
+    },
+    {
+      "system": "soft",
+      "corruption": "salt",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.03432974876959306,
+      "psnr": 26.501700941175752,
+      "ssim": 0.8294224694318426
+    },
+    {
+      "system": "soft",
+      "corruption": "salt",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.03588666586354111,
+      "psnr": 26.05280768757589,
+      "ssim": 0.811968238778061
+    },
+    {
+      "system": "soft",
+      "corruption": "salt",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.03751763208896433,
+      "psnr": 25.638946404798897,
+      "ssim": 0.7887001719176525
+    },
+    {
+      "system": "soft",
+      "corruption": "blur",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.02245224089001027,
+      "psnr": 29.860242903411276,
+      "ssim": 0.9090836457999535
+    },
+    {
+      "system": "soft",
+      "corruption": "blur",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.031678384240756294,
+      "psnr": 27.15547408132275,
+      "ssim": 0.8394979559033338
+    },
+    {
+      "system": "soft",
+      "corruption": "blur",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.03877985004754978,
+      "psnr": 25.133065155852748,
+      "ssim": 0.7343649150858006
+    },
+    {
+      "system": "soft",
+      "corruption": "occlusion",
+      "severity": "low",
+      "n": 3669,
+      "l1": 0.04017776005202587,
+      "psnr": 20.323248026253385,
+      "ssim": 0.8600147754871803
+    },
+    {
+      "system": "soft",
+      "corruption": "occlusion",
+      "severity": "medium",
+      "n": 3669,
+      "l1": 0.050630043805230375,
+      "psnr": 21.61157578686402,
+      "ssim": 0.7445347729382966
+    },
+    {
+      "system": "soft",
+      "corruption": "occlusion",
+      "severity": "high",
+      "n": 3669,
+      "l1": 0.06672986353191393,
+      "psnr": 19.321751137850686,
+      "ssim": 0.6418043275349274
+    }
+  ],
+  "classifier": {
+    "clean": {
+      "precision": 0.89231220657277,
+      "recall": 0.8288361951485418,
+      "f1-score": 0.8594037021336725,
+      "support": 3669.0
+    },
+    "salt": {
+      "precision": 0.991778099024214,
+      "recall": 0.9972744617061869,
+      "f1-score": 0.9945186862967157,
+      "support": 11007.0
+    },
+    "blur": {
+      "precision": 0.9576340379207112,
+      "recall": 0.9590260743163441,
+      "f1-score": 0.9583295506128007,
+      "support": 11007.0
+    },
+    "occlusion": {
+      "precision": 0.9792690554910196,
+      "recall": 0.9956391387298992,
+      "f1-score": 0.9873862510136048,
+      "support": 11007.0
+    },
+    "accuracy": 0.9684655219405832,
+    "macro avg": {
+      "precision": 0.9552483497521788,
+      "recall": 0.945193967475243,
+      "f1-score": 0.9499095475141984,
+      "support": 36690.0
+    },
+    "weighted avg": {
+      "precision": 0.9678355783880603,
+      "recall": 0.9684655219405832,
+      "f1-score": 0.9680107165903036,
+      "support": 36690.0
+    }
+  },
+  "face": [
+    {
+      "style": 0,
+      "n": 619,
+      "l1": 0.08758495341210065,
+      "psnr": 16.583504840900133,
+      "ssim": 0.5006332902270874
+    },
+    {
+      "style": 1,
+      "n": 381,
+      "l1": 0.17071427121328245,
+      "psnr": 11.528256788028507,
+      "ssim": 0.36540059506736716
+    },
+    {
+      "style": 2,
+      "n": 46,
+      "l1": 0.0701154649419629,
+      "psnr": 18.186639267465342,
+      "ssim": 0.5724853069885917
+    }
+  ],
+  "routing": [
+    {
+      "corruption": "clean",
+      "severity": "clean",
+      "n": 3669,
+      "clean": 0.911495936692127,
+      "salt": 0.01636591063725193,
+      "blur": 0.028791723808883774,
+      "occlusion": 0.04334642964300005
+    },
+    {
+      "corruption": "salt",
+      "severity": "low",
+      "n": 3669,
+      "clean": 0.044343878932338605,
+      "salt": 0.9529052976705185,
+      "blur": 1.0549763639815945e-19,
+      "occlusion": 0.0027508235674716924
+    },
+    {
+      "corruption": "salt",
+      "severity": "medium",
+      "n": 3669,
+      "clean": 0.0004005429945861164,
+      "salt": 0.9995993805146081,
+      "blur": 2.3679614278587806e-45,
+      "occlusion": 7.945676842614912e-08
+    },
+    {
+      "corruption": "salt",
+      "severity": "high",
+      "n": 3669,
+      "clean": 2.0554495885326043e-06,
+      "salt": 0.999997944915025,
+      "blur": 0.0,
+      "occlusion": 5.491374171271895e-13
+    },
+    {
+      "corruption": "blur",
+      "severity": "low",
+      "n": 3669,
+      "clean": 0.5578125799648437,
+      "salt": 1.9062347917507597e-05,
+      "blur": 0.40683148621758536,
+      "occlusion": 0.035336871057013684
+    },
+    {
+      "corruption": "blur",
+      "severity": "medium",
+      "n": 3669,
+      "clean": 0.29122514870986405,
+      "salt": 3.531180530096533e-06,
+      "blur": 0.6895080340534254,
+      "occlusion": 0.01926328698862329
+    },
+    {
+      "corruption": "blur",
+      "severity": "high",
+      "n": 3669,
+      "clean": 0.29403934264177356,
+      "salt": 3.868422117401935e-06,
+      "blur": 0.686608747443863,
+      "occlusion": 0.01934804121739543
+    },
+    {
+      "corruption": "occlusion",
+      "severity": "low",
+      "n": 3669,
+      "clean": 0.5937885004046235,
+      "salt": 0.008542893816544439,
+      "blur": 0.0064215999547328016,
+      "occlusion": 0.39124700728770917
+    },
+    {
+      "corruption": "occlusion",
+      "severity": "medium",
+      "n": 3669,
+      "clean": 0.11213087728912889,
+      "salt": 0.0007661912527131232,
+      "blur": 0.001130569156406434,
+      "occlusion": 0.8859723624873589
+    },
+    {
+      "corruption": "occlusion",
+      "severity": "high",
+      "n": 3669,
+      "clean": 0.0037951492213273747,
+      "salt": 2.7765266146829684e-06,
+      "blur": 8.212634239302072e-05,
+      "occlusion": 0.9961199486863227
+    }
+  ]
+}

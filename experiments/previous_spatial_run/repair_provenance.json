@@ -1,0 +1,30 @@
+{
+  "reason": "Near-constant outputs in the first-run validation examples",
+  "pilot_validation_objective": 0.2805698961019516,
+  "pilot_history": [
+    {
+      "train_loss": 0.30364827325810556,
+      "validation_objective": 0.2920089980830317,
+      "validation_l1": 0.19471648950939593,
+      "validation_ssim": 0.31882099781347356,
+      "validation_psnr": 12.406805660413658,
+      "seconds": 23.811529636383057,
+      "epoch": 1
+    },
+    {
+      "train_loss": 0.28769094529359235,
+      "validation_objective": 0.2805698961019516,
+      "validation_l1": 0.18373828983825186,
+      "validation_ssim": 0.3321037115610164,
+      "validation_psnr": 12.690221135512642,
+      "seconds": 23.51502275466919,
+      "epoch": 2
+    }
+  ],
+  "change": "Compressed spatial latent; GroupNorm/LeakyReLU; bilinear resize-convolution decoder",
+  "original_test_previously_observed": true,
+  "selection": "Repair decisions and checkpoint selection use validation only",
+  "classifier_gan": "Retrained with original validation-selected settings; search records retained",
+  "status": "evaluated_and_exported",
+  "last_completed_task": "gan"
+}

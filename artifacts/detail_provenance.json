@@ -1,0 +1,38 @@
+{
+  "status": "validation_evaluated_and_exported",
+  "previous_test_previously_observed": true,
+  "selection": "validation only; no automatic test evaluation",
+  "pilot_best": 0.14388949232904807,
+  "previous_universal_best": 0.24516189947076467,
+  "pilot_config": {
+    "base": 24,
+    "latent": 8192,
+    "dropout": 0.0,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "weight_decay": 1e-05,
+    "alpha": 0.8,
+    "detail": true,
+    "detail_bn": true,
+    "detail_shuffle": true
+  },
+  "pilot_weights_available": false,
+  "runtime_recovery": "Fresh CPU training from saved validation evidence after free Colab GPU quota; pilot weights were lost",
+  "architecture": "16x16 compressed latent, local residual refinement, no cross-encoder-decoder skips",
+  "upsampling_initialization": "ICNR phase matched in fresh final runs; selected pilot used standard initialization",
+  "classifier": "retained from the previous validation-selected run",
+  "gan": "new normalized U-Net/PatchGAN with learned upsampling; separate Optuna study and full training",
+  "fixed_schedule": {
+    "universal": 24,
+    "specialists": 20,
+    "soft": 12,
+    "gan": 60
+  },
+  "trial_budget": {
+    "epochs": 3,
+    "train_batches": 40,
+    "validation_batches": 40
+  },
+  "cpu_execution_layout": "channels_last",
+  "last_completed_task": "gan"
+}

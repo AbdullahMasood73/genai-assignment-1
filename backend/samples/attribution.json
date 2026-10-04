@@ -1,0 +1,23 @@
+{
+  "source": "https://www.robots.ox.ac.uk/~vgg/data/pets/",
+  "license": "CC BY-SA 4.0",
+  "split": "train",
+  "examples": [
+    {
+      "id": "Persian_116",
+      "image": "pets/Persian_116.png"
+    },
+    {
+      "id": "Birman_15",
+      "image": "pets/Birman_15.png"
+    },
+    {
+      "id": "pomeranian_127",
+      "image": "pets/pomeranian_127.png"
+    },
+    {
+      "id": "Maine_Coon_144",
+      "image": "pets/Maine_Coon_144.png"
+    }
+  ]
+}

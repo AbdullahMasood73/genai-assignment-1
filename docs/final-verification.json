@@ -1,0 +1,11 @@
+{
+  "delivery_checksums": "passed",
+  "delivery_zip_crc": "passed",
+  "full_backup_zip_crc": "passed",
+  "browser_download_png": "passed",
+  "video_full_decode": "passed",
+  "video_seconds": 399.6987755102041,
+  "pdf_pages": 13,
+  "container_http": "passed",
+  "tests": "15 passed"
+}

@@ -1,0 +1,17 @@
+.venv
+.git
+data
+artifacts*
+delivery*
+tools
+tmp
+docs/stitch-evidence
+docs/screenshots*
+report
+experiments
+notebooks
+frontend/node_modules
+frontend/dist
+__pycache__
+.pytest_cache
+*.zip

@@ -1,0 +1,17 @@
+{
+  "scope": "Disposable random inputs/models; not assignment training or quality results",
+  "torch": "2.8.0+cpu",
+  "threads": 4,
+  "batch_size": 16,
+  "output_max_absolute_difference": 5.960464477539063e-08,
+  "measurements": {
+    "contiguous": {
+      "train_median_seconds": 1.965717899845913,
+      "validation_median_seconds": 0.6704539000056684
+    },
+    "channels_last": {
+      "train_median_seconds": 1.3998837999533862,
+      "validation_median_seconds": 0.4917752000037581
+    }
+  }
+}

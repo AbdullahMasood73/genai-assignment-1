@@ -1,0 +1,74 @@
+{
+  "task": "specialists",
+  "best_trial": 3,
+  "best_value": 0.251844065139691,
+  "completed": 4,
+  "pruned": 0,
+  "budget": {
+    "epochs": 3,
+    "train_batches": 40,
+    "validation_batches": 20
+  },
+  "search_space": {
+    "batch_size": "CategoricalDistribution(choices=(16, 32, 64))",
+    "lr": "FloatDistribution(high=0.003, log=True, low=0.0001, step=None)",
+    "base": "CategoricalDistribution(choices=(8, 16, 24))",
+    "dropout": "FloatDistribution(high=0.3, log=False, low=0.0, step=None)",
+    "latent": "CategoricalDistribution(choices=(256, 512, 1024))",
+    "alpha": "FloatDistribution(high=0.95, log=False, low=0.6, step=None)"
+  },
+  "trials": [
+    {
+      "number": 0,
+      "state": "COMPLETE",
+      "value": 0.29491342330972353,
+      "params": {
+        "batch_size": 32,
+        "lr": 0.001,
+        "base": 16,
+        "dropout": 0.0,
+        "latent": 512,
+        "alpha": 0.8
+      }
+    },
+    {
+      "number": 1,
+      "state": "COMPLETE",
+      "value": 0.2615410367647807,
+      "params": {
+        "batch_size": 32,
+        "lr": 0.0007661100707771367,
+        "base": 8,
+        "dropout": 0.2598528437324805,
+        "latent": 512,
+        "alpha": 0.939468448256698
+      }
+    },
+    {
+      "number": 2,
+      "state": "COMPLETE",
+      "value": 0.2846174692114194,
+      "params": {
+        "batch_size": 16,
+        "lr": 0.00018659959624904942,
+        "base": 16,
+        "dropout": 0.08736874205941257,
+        "latent": 256,
+        "alpha": 0.7282266451527921
+      }
+    },
+    {
+      "number": 3,
+      "state": "COMPLETE",
+      "value": 0.251844065139691,
+      "params": {
+        "batch_size": 32,
+        "lr": 0.0005748924681991981,
+        "base": 24,
+        "dropout": 0.051157237106187456,
+        "latent": 1024,
+        "alpha": 0.8829390718407614
+      }
+    }
+  ]
+}

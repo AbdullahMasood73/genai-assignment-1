@@ -1,0 +1,182 @@
+{
+  "split": "validation",
+  "selected_epoch": 22,
+  "best_objective": 0.08527529421059982,
+  "columns": [
+    "target",
+    "input",
+    "output",
+    "absolute error"
+  ],
+  "examples": [
+    {
+      "id": "great_pyrenees_130",
+      "corruption": {
+        "kind": "blur",
+        "seed": 10036,
+        "level": "high",
+        "kernel": 7,
+        "sigma": 2.5
+      },
+      "output_l1": 0.023590758442878723,
+      "input_l1": 0.02103698067367077
+    },
+    {
+      "id": "saint_bernard_138",
+      "corruption": {
+        "kind": "salt",
+        "seed": 2001,
+        "level": "medium",
+        "probability": 0.08
+      },
+      "output_l1": 0.04465404152870178,
+      "input_l1": 0.04013456404209137
+    },
+    {
+      "id": "yorkshire_terrier_177",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 17666,
+        "level": "medium",
+        "rectangles": [
+          [
+            2,
+            3,
+            126,
+            13
+          ],
+          [
+            1,
+            93,
+            91,
+            18
+          ]
+        ],
+        "requested_area": 0.2
+      },
+      "output_l1": 0.0676451325416565,
+      "input_l1": 0.09943927079439163
+    },
+    {
+      "id": "Sphynx_102",
+      "corruption": {
+        "kind": "blur",
+        "seed": 12049,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.028672486543655396,
+      "input_l1": 0.012662373483181
+    },
+    {
+      "id": "Abyssinian_101",
+      "corruption": {
+        "kind": "salt",
+        "seed": 14958,
+        "level": "low",
+        "probability": 0.03
+      },
+      "output_l1": 0.05166170373558998,
+      "input_l1": 0.01495496928691864
+    },
+    {
+      "id": "Russian_Blue_184",
+      "corruption": {
+        "kind": "blur",
+        "seed": 19613,
+        "level": "low",
+        "kernel": 3,
+        "sigma": 0.7
+      },
+      "output_l1": 0.021697698161005974,
+      "input_l1": 0.01177562028169632
+    },
+    {
+      "id": "staffordshire_bull_terrier_171",
+      "corruption": {
+        "kind": "blur",
+        "seed": 2068,
+        "level": "medium",
+        "kernel": 5,
+        "sigma": 1.5
+      },
+      "output_l1": 0.042303141206502914,
+      "input_l1": 0.03867856785655022
+    },
+    {
+      "id": "Ragdoll_191",
+      "corruption": {
+        "kind": "salt",
+        "seed": 9907,
+        "level": "high",
+        "probability": 0.15
+      },
+      "output_l1": 0.030899740755558014,
+      "input_l1": 0.07498196512460709
+    },
+    {
+      "id": "american_bulldog_126",
+      "corruption": {
+        "kind": "salt",
+        "seed": 2187,
+        "level": "medium",
+        "probability": 0.08
+      },
+      "output_l1": 0.039864908903837204,
+      "input_l1": 0.03872564807534218
+    },
+    {
+      "id": "japanese_chin_118",
+      "corruption": {
+        "kind": "occlusion",
+        "seed": 15931,
+        "level": "high",
+        "rectangles": [
+          [
+            21,
+            2,
+            49,
+            39
+          ],
+          [
+            57,
+            43,
+            49,
+            39
+          ],
+          [
+            22,
+            94,
+            58,
+            33
+          ]
+        ],
+        "requested_area": 0.35
+      },
+      "output_l1": 0.07260935753583908,
+      "input_l1": 0.18036049604415894
+    },
+    {
+      "id": "Abyssinian_131",
+      "corruption": {
+        "kind": "clean",
+        "seed": 22300,
+        "level": "sampled"
+      },
+      "output_l1": 0.023324713110923767,
+      "input_l1": 0.0
+    },
+    {
+      "id": "american_bulldog_180",
+      "corruption": {
+        "kind": "salt",
+        "seed": 4636,
+        "level": "medium",
+        "probability": 0.08
+      },
+      "output_l1": 0.03359871730208397,
+      "input_l1": 0.041396837681531906
+    }
+  ]
+}

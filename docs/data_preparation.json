@@ -1,0 +1,41 @@
+{
+  "seed": 42,
+  "image_size": 128,
+  "pets": {
+    "validation": 736,
+    "train": 2944,
+    "test": 3669
+  },
+  "fs2k": {
+    "train": {
+      "pairs": 899,
+      "styles": [
+        303,
+        298,
+        298
+      ]
+    },
+    "validation": {
+      "pairs": 159,
+      "styles": [
+        54,
+        52,
+        53
+      ]
+    },
+    "test": {
+      "pairs": 1046,
+      "styles": [
+        619,
+        381,
+        46
+      ]
+    }
+  },
+  "manifest_sha256": {
+    "fs2k.json": "ed3a5fc2207f4e2f192754b6a47f6065413a76cfae94c45cacb804a4d2f78bba",
+    "pets.json": "cbcbafc6bd2f6dcbfa03977900a84c401af3512c25552de056e71f1258250c38",
+    "pets_test.json": "bdca74e5760ae7e4afcc46a6fcdb5d679917ffd605c632852a7420a10b5fccd0",
+    "pets_validation.json": "26ed901dc1c6cb7081db42a552016988607143f20c4a7036f464375f2f7250c1"
+  }
+}

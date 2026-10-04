@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restoration Lab · Docker startup</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f6f7f3;color:#17362c;font:16px 'Segoe UI',Arial,sans-serif}
+    main{max-width:1120px;margin:0 auto;padding:34px}header{display:flex;align-items:center;justify-content:space-between}
+    .brand{font-size:22px;font-weight:650}.badge{font-size:13px;background:#e4eddf;padding:9px 14px;border-radius:30px}
+    h1{font-size:38px;font-weight:600;letter-spacing:-1px;margin:38px 0 12px}p{color:#53665f;line-height:1.6}
+    .command{display:block;padding:18px 22px;background:white;border:1px solid #dce5da;border-radius:10px;font:20px Consolas,monospace}
+    .terminal{background:#102a24;color:#dcebd4;border-radius:12px;margin:24px 0;overflow:hidden}
+    .terminal-head{padding:14px 22px;border-bottom:1px solid #365047;font-size:13px;display:flex;justify-content:space-between}
+    pre{margin:0;padding:20px 22px;height:350px;overflow:auto;white-space:pre-wrap;font:15px/1.6 Consolas,monospace}
+    a{display:inline-block;background:#254c3d;color:white;border-radius:8px;padding:14px 22px;text-decoration:none;font-weight:600}
+    .note{font-size:13px;margin-top:20px}footer{margin-top:25px;color:#718278;font-size:12px}
+  </style>
+</head>
+<body>
+<main>
+  <header><div class="brand">Restoration Lab</div><div class="badge">Local container deployment</div></header>
+  <h1>Start the complete application</h1>
+  <p>With the verified model bundle imported and Docker Engine available, one command starts the frontend and backend.</p>
+  <code class="command">docker compose up --build -d</code>
+  <div class="terminal">
+    <div class="terminal-head"><span>Actual Docker Compose output</span><span id="state">Waiting for startup</span></div>
+    <pre id="output">Waiting for the startup command to run…</pre>
+  </div>
+  <a href="http://127.0.0.1:8080">Open running application</a>
+  <p class="note">This laptop uses its existing Ubuntu WSL Docker engine. The <code>-d</code> option leaves the containers running in the background.</p>
+  <footer>Demonstration log viewer · localhost only</footer>
+</main>
+<script>
+  const output = document.getElementById('output');
+  const state = document.getElementById('state');
+  async function update() {
+    try {
+      const response = await fetch('compose.log', {cache:'no-store'});
+      if (!response.ok) return;
+      const text = (await response.text()).replace(/\u001b\[[0-9;]*m/g, '');
+      if (text.trim() && text !== output.textContent) {
+        output.textContent = text;
+        output.scrollTop = output.scrollHeight;
+        state.textContent = 'Startup log received';
+      }
+    } catch { state.textContent = 'Waiting for log'; }
+  }
+  update();
+  setInterval(update, 1000);
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+[
+  {
+    "index": 5379,
+    "id": "Egyptian_Mau_142",
+    "system": "universal",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.1454073041677475,
+    "psnr": 13.723546981811523,
+    "ssim": 0.295632004737854,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 5809,
+    "id": "saint_bernard_115",
+    "system": "universal",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.10675422102212906,
+    "psnr": 14.065235137939453,
+    "ssim": 0.6160794496536255,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 2609,
+    "id": "american_bulldog_176",
+    "system": "universal",
+    "corruption": "occlusion",
+    "severity": "high",
+    "l1": 0.10023891925811768,
+    "psnr": 14.357796669006348,
+    "ssim": 0.6604377031326294,
+    "predicted": "occlusion",
+    "routing_correct": true
+  },
+  {
+    "index": 228,
+    "id": "Abyssinian_174",
+    "system": "universal",
+    "corruption": "occlusion",
+    "severity": "medium",
+    "l1": 0.08064726740121841,
+    "psnr": 14.68070125579834,
+    "ssim": 0.6767526865005493,
+    "predicted": "occlusion",
+    "routing_correct": true
+  }
+]
