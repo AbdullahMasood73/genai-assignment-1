@@ -3,6 +3,29 @@
 Record the real screen (OBS Studio or the Windows Game Bar, Win+G), speak live, upload to YouTube
 (unlisted is fine) and put only the link in the report and README.
 
+## Starting the app on the author's Windows laptop (Docker runs inside WSL)
+
+This laptop has no Docker Desktop; Docker Engine runs inside the Ubuntu WSL distro with a temporary socket.
+If the engine is not running (for example after a reboot or `wsl --shutdown`), start it first and leave that
+window open:
+
+```powershell
+wsl -d Ubuntu-22.04 -u root bash "/mnt/c/Users/PC/OneDrive - FAST National University/Desktop/Codex/genai-assignment/scripts/start_wsl_docker.sh"
+```
+
+Then, in a second terminal, show the startup that the video needs:
+
+```powershell
+wsl -d Ubuntu-22.04 -u root
+export DOCKER_HOST=unix:///tmp/restoration-lab-docker.sock
+cd /tmp/restoration-lab        # a clone of this repository
+docker compose down
+docker compose up --build      # open http://localhost:8080 in the browser
+```
+
+On any machine with Docker Desktop or Docker Engine the same two commands inside the repository folder are
+`docker compose up --build` (no `DOCKER_HOST`).
+
 Before recording: run `docker compose down`, close other windows, open a terminal in the repository,
 and keep a few unseen photographs (a pet photo, a face photo) ready.
 
