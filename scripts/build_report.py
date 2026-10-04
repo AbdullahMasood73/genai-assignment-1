@@ -58,7 +58,7 @@ def discussion_section(summary, artifacts):
              ("predicted_routing", "Predicted routing"), ("soft", "Soft mixture"))
     lines = [r"\begin{table}[!ht]\centering\caption{Mean test PSNR (dB) / SSIM per condition, averaged over severities "
              r"(clean PSNR is capped at 100 dB)}\label{tab:means}\scriptsize" + "\n",
-             r"\begin{tabular}{lcccc}\toprule System & Clean & Salt & Blur & Occlusion\\\midrule" + "\n"]
+             r"\setlength{\tabcolsep}{3pt}\begin{tabular}{lcccc}\toprule System & Clean & Salt & Blur & Occlusion\\\midrule" + "\n"]
     for system, label in names:
         cells = [f"{_mean(summary, system, kind, 'psnr'):.1f}/{_mean(summary, system, kind, 'ssim'):.3f}"
                  for kind in ("clean", "salt", "blur", "occlusion")]

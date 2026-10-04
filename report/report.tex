@@ -62,7 +62,7 @@ and local (PatchGAN) discriminator \cite{isola} motivate Task~4, using FS2K
 field; it is a local discriminator variant rather than the original 70-pixel design.
 
 \begin{table}[!ht]\centering\caption{Alternatives investigated and the decision taken}\scriptsize
-\begin{tabular}{p{.27\linewidth}p{.38\linewidth}p{.25\linewidth}}\toprule
+\renewcommand{\arraystretch}{1.12}\begin{tabular}{>{\raggedright\arraybackslash}p{.25\linewidth}>{\raggedright\arraybackslash}p{.36\linewidth}>{\raggedright\arraybackslash}p{.24\linewidth}}\toprule
 Alternative & Evidence or reasoning & Decision\\\midrule
 Restoration U-Net with long skips & Bypasses the required bottleneck \cite{unet} & Rejected\\
 Dense latent vector (128 values) & Collapsed, nearly constant outputs in validation grids (objective 0.322) & Replaced by spatial latent\\
@@ -164,6 +164,20 @@ misclassified clean input can be unnecessarily altered in predicted mode.
 Accuracy, macro precision/recall/F1, per-class metrics, a normalized confusion
 matrix, and individual routing failures are included after evaluation.
 
+\begin{figure}[!ht]\centering
+\begin{tikzpicture}[every node/.style={draw,rounded corners,font=\scriptsize,align=center,minimum height=6mm},>=Stealth]
+\node (x) at (0.3,0) {Input};
+\node (c) at (1.9,0) {CNN\\classifier};
+\node (r) at (3.6,0) {argmax\\router};
+\node (e0) at (5.7,1.3) {Identity (clean)};
+\node (e1) at (5.7,0.45) {Salt AE};
+\node (e2) at (5.7,-0.45) {Blur AE};
+\node (e3) at (5.7,-1.3) {Occlusion AE};
+\node (y) at (7.7,0) {Output};
+\draw[->] (x)--(c);\draw[->] (c)--(r);
+\foreach \i in {0,1,2,3} {\draw[->] (r)--(e\i);\draw[->] (e\i)--(y);}
+\end{tikzpicture}\caption{Task 2 hard routing: the classifier selects exactly one branch; clean inputs bypass restoration.}\end{figure}
+
 \section{Task 3: Joint Soft Mixture}
 The gate is initialized from the trained classifier and the three experts from
 Task 2. An initial two-epoch warm-up trains only the gate with experts frozen;
@@ -202,6 +216,20 @@ Discriminator real/fake losses and generator adversarial/reconstruction losses
 are logged separately. The same fixed validation photographs are saved every
 five epochs. Only the generator is deployed. Cross-style outputs on one photo
 are qualitative evidence; paired metrics apply to its annotated style only.
+
+\begin{figure}[!ht]\centering
+\begin{tikzpicture}[every node/.style={draw,rounded corners,font=\scriptsize,align=center,minimum height=6mm},>=Stealth]
+\node (p) at (0.4,1.0) {Photo $x$};
+\node (s) at (0.4,-0.2) {Style $s$\\embedding};
+\node (g) at (2.5,0.4) {U-Net\\generator $G$};
+\node (y) at (4.6,0.9) {Sketch\\$G(x,s)$};
+\node (t) at (4.6,-0.5) {Target\\sketch $y$};
+\node (d) at (6.9,0.2) {PatchGAN\\$D$};
+\draw[->] (p)--(g);\draw[->] (s)--(g);\draw[->] (g)--(y);
+\draw[->] (y)--(d);\draw[->] (t)--(d);
+\draw[->,dashed] (s.south) -- ++(0,-0.55) -| (d.south);
+\end{tikzpicture}\caption{Task 4 conditional GAN. The style embedding enters both $G$ and $D$ (dashed); $D$ outputs a map of local real/fake scores.}\end{figure}
+
 
 \section{Hyperparameter Search and Training}
 Optuna TPE samples configurations and median pruning stops unpromising
@@ -641,7 +669,7 @@ Selected gan checkpoint: epoch 12. Configuration: base=24, latent=128, dropout=0
 \section{Discussion of Results}\label{sec:discussion}
 \begin{table}[!ht]\centering\caption{Mean test PSNR (dB) / SSIM per condition, averaged over severities (clean PSNR is capped at 100 dB)}\label{tab:means}\scriptsize
 
-\begin{tabular}{lcccc}\toprule System & Clean & Salt & Blur & Occlusion\\\midrule
+\setlength{\tabcolsep}{3pt}\begin{tabular}{lcccc}\toprule System & Clean & Salt & Blur & Occlusion\\\midrule
 
 Input (unrestored) & 100.0/1.000 & 16.4/0.382 & 27.8/0.814 & 13.5/0.702\\
 
@@ -688,7 +716,7 @@ or soft weights, and inference latency. Runtime corruption makes the clean
 reference available for an error map; an arbitrary uploaded corrupted image
 does not provide an assumed ground truth.
 \begin{table}[!ht]\centering\caption{Backend endpoints}\scriptsize
-\begin{tabular}{p{.38\linewidth}p{.5\linewidth}}\toprule Endpoint & Purpose\\\midrule
+\begin{tabular}{>{\raggedright\arraybackslash}p{.42\linewidth}>{\raggedright\arraybackslash}p{.46\linewidth}}\toprule Endpoint & Purpose\\\midrule
 GET \texttt{/api/health} & Per-model and per-workspace readiness\\
 GET \texttt{/api/samples} & Clean sample images\\
 GET \texttt{/api/experiments} & Test metrics and MLflow run records\\
@@ -712,6 +740,16 @@ including all three GAN styles. Acceptance uses absolute tolerance $10^{-4}$
 and relative tolerance $10^{-3}$ for every output. Actual maximum deviations
 are stored in the deployment manifest. The complete soft inference pipeline is
 one graph; the classifier and specialists are separate graphs for hard routing.
+
+\begin{figure}[!ht]\centering
+\begin{tikzpicture}[every node/.style={draw,rounded corners,font=\scriptsize,align=center,minimum height=6mm},>=Stealth]
+\node (b) at (0.9,0) {Browser\\React + Tailwind};
+\node (n) at (3.2,0) {Nginx\\:8080};
+\node (f) at (5.0,0) {FastAPI};
+\node (o) at (7.2,0.6) {ONNX Runtime\\7 models};
+\node (m) at (7.2,-0.7) {Results and\\MLflow DB};
+\draw[<->] (b)--(n);\draw[<->] (n)--(f);\draw[->] (f)--(o);\draw[->] (f)--(m);
+\end{tikzpicture}\caption{Deployment: two Docker Compose services; model and result files are mounted read-only into the backend.}\end{figure}
 \evidencefigure{app-experiments.jpg}{Application with imported trained ONNX models: app-experiments}
 
 \evidencefigure{app-hard.jpg}{Application with imported trained ONNX models: app-hard}
@@ -759,7 +797,7 @@ The measured results above characterize the selected compact models under the re
 \appendices
 \section{AI Use and Verification}
 \begin{table}[!ht]\centering\caption{AI tools used, purpose and verification}\scriptsize
-\begin{tabular}{p{.17\linewidth}p{.35\linewidth}p{.33\linewidth}}\toprule
+\renewcommand{\arraystretch}{1.12}\begin{tabular}{>{\raggedright\arraybackslash}p{.16\linewidth}>{\raggedright\arraybackslash}p{.34\linewidth}>{\raggedright\arraybackslash}p{.32\linewidth}}\toprule
 Tool & Used for & How outputs were checked\\\midrule
 OpenAI Codex & Reading the assignment, finding sources, drafting models, training and evaluation code, FastAPI/React code, Colab notebook, tests, first report draft & 20 automated tests (corruptions, balanced batches, paired augmentation, SSIM, bottleneck, gradients through all mixture branches, style conditioning, upload validation, resume, ONNX), validation grids, ONNX-vs-PyTorch comparison, Docker runs\\
 Anthropic Claude (Claude Code) & Final audit of the repository against the assignment, report revision (protocol, discussion, limitations), documentation and repository packaging & Numbers in the discussion are computed from the saved result files by the report script; documents compared with files; tests re-run\\
